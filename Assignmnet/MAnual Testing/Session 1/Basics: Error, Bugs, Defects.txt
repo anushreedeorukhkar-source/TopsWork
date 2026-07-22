@@ -1,0 +1,48 @@
+1.Open the homepage of Zomato or Flipkart in your browser and carefully review it for any visible errors, bugs, or defects (such as broken images, misaligned buttons, typos, or non-working links). List at least 3 issues you observe and describe why you think each one is a defect.
+Answer : In the Zomato app there are some defects as follows :
+a) Same items remains in the cart after the fisrt order. 
+The  cart doesn't get refreshed after the oder is completed and user tend to get the same items from previous cart, which makes same product buy multiple times.
+
+b) Mode of Payment.
+Sometimes it becomes difficult to choose payment mode like COD, UPI, etc. 
+The application does not accept the cash on delivery mode for payment.
+
+c) Delivery address can not be changed.
+ The application is not able to navigate the specific loaction of the user due to which it is not possible to change the  user address. 
+
+
+
+2.Write a short explanation (2-3 sentences each) for the following: What is the difference between an error, a bug, and a defect? Give one real-world example for each from any app you use daily (e.g., Instagram, Paytm, IRCTC).
+Answer : 
+a) Error
+An error is a mistake made by a person while crearing the software, such as a developer writing the wrong code or a tester misunderstanding a requirement.
+Example - In the Instagram app a developer writes the wrong code, so the "Like" button does not work properly. This mistake is called an error.
+
+b) Bug
+A bug is a problem in the application that the users or testers can see while using it. It makes the app behave in an unexpected way.
+Example - User entered the correct UPI PIN, but the app freezes and the payment doesn not happen. This problem is a bug.
+
+c) Defect
+A defect is a confirmed problem where the app does not work as it is supposed to according to the requiremnts.
+Example - User successfully pays for train ticket but doesn't get booked. Since the app did not do as it was expected to do, this is called a defect.
+
+
+3.Think of a recent time when an app you use (like WhatsApp, BookMyShow, or PhonePe) didn't work as expected. Identify the possible cause of the defect: was it a human error, a technical limitation, or a process gap? Explain your reasoning for each case.<br><br><em><strong>Hint:</strong> Consider examples like payment failures, app crashes, or incorrect notifications.</em>
+
+
+4.Imagine you are testing a new food delivery app (like Swiggy). List 3 types of risks that could affect the quality of the app before launch (for example: security risk, usability risk, performance risk). For each risk, briefly explain how it could impact users.
+Answer :
+a) Security Risk
+A security risk means user's personal or payment information is not properly protected.
+Example: If the app is not secure, hackers could steal users' personal details or payment information, causing users to lose trust in the app.
+
+b) Performance Risk
+A performance risk means the app is slow, crashes, or takes too long to load.
+Example: Users may not be able to place orders quickly, and they may leave the app and use another food delivery service instead.
+
+C) Usability Risk
+A usability risk means the app is difficult to use or understand.
+Example: If users cannot easily search for restaurants, add items to the cart, or complete payment, they may get frustrated and stop using the app.
+
+
+5.You are given a mini project: a Movie Ticket Booking webpage. Classify the following as either a defect or a risk: (a) The 'Book Now' button does not respond on mobile, (b) There is no logout option, (c) The app sometimes loads slowly during IPL match days. Justify your answer for each.
