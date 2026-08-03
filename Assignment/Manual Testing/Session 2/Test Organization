@@ -1,0 +1,40 @@
+1.List 3 key responsibilities each for a Tester and a Test Leader in a software project, and give one example of how each role contributes during a release cycle.
+Answer : The 3 key responsibilities of a tester and test leader are as follows:
+
+1. Tester
+A Tester checks the software to find bugs and make sure it works correctly.
+-Key Responsibilities:
+a)Create and run test cases to check different features.
+b)Find and report bugs to the development team.
+c)Retest fixed bugs to make sure they are solved.
+eg : Before the software is released, the tester checks features like login, payment, and search to ensure they work correctly and reports any problems.
+
+2. Test Leader
+A Test Leader manages the testing team and ensures testing is completed on time.
+-Key Responsibilities:
+a)Plan the testing activities and assign work to testers.
+b)Monitor testing progress and make sure deadlines are met.
+c)Review test reports and decide if the software is ready for release.
+eg : Before the software release, the Test Leader reviews all test results, confirms that important bugs are fixed, and gives approval to release the software.
+  
+
+
+2.Pick any app you use daily (Instagram, Zomato, Paytm, etc.) and write a one-paragraph comparison of how Quality Assurance (QA) and Quality Control (QC) would be performed for that app.<br><br><em><strong>Hint:</strong> Think about activities done before coding vs after coding is complete.</em>
+Answer : 
+For an app like Zomato,
+Quality Assurance (QA) is done before coding starts. The team understands the requirements, plans the food ordering process, prepares test plans, and follows coding standards to avoid mistakes during development. This helps build the app correctly from the beginning. 
+Quality Control (QC) is done after coding is complete. Testers use the app to check if users can search for restaurants, add food to the cart, place orders, make payments, and track deliveries without any errors. If any bugs are found, they are fixed before the app is released. 
+Therefore, QA focuses on preventing problems before coding, while QC focuses on finding and fixing problems after coding is finished.
+
+
+
+3.Explain the difference between Testing and Debugging by describing what a tester does vs what a developer does when a bug is found in a Flipkart-style shopping cart feature.
+Answer :   In a Flipkart-style shopping cart, testing is done by a tester. The tester checks whether the cart works correctly by adding products, changing quantities, removing items, and checking the total price. If the tester finds a bug, such as the total price not updating after changing the quantity, they report it to the developer. Debugging is done by the developer. The developer finds the cause of the bug in the code, fixes it, and tests the fix. After that, the tester checks the shopping cart again to make sure the problem is solved which is known as re-testing.
+>Therefore testing is to find defects and bugs while debugging is to fix the defects.
+>Testing is generally done by testers while debugging is done by developer.
+>Testing is done before debugging while debugging is done after testing.
+
+
+
+4.Create a basic test plan skeleton in a Word or Google Doc for a new feature in a food delivery app (like Swiggy) — include at least these sections: Test Plan ID, Feature Description, Test Scope, Roles & Responsibilities, Test Environment, and Test Deliverables.<br><br><em><strong>Constraint:</strong> Do not copy any template from the internet; write each section in your own words for a real food delivery feature (e.g., promo code, order tracking).</em>
+Answer : 
