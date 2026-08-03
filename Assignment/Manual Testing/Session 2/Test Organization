@@ -37,4 +37,22 @@ Answer :   In a Flipkart-style shopping cart, testing is done by a tester. The t
 
 
 4.Create a basic test plan skeleton in a Word or Google Doc for a new feature in a food delivery app (like Swiggy) — include at least these sections: Test Plan ID, Feature Description, Test Scope, Roles & Responsibilities, Test Environment, and Test Deliverables.<br><br><em><strong>Constraint:</strong> Do not copy any template from the internet; write each section in your own words for a real food delivery feature (e.g., promo code, order tracking).</em>
-Answer : 
+Answer :
+Test Plan Skeleton - Swiggy Promo Code Feature
+>Test Plan ID
+001
+>Feature Description
+This feature allows users to apply a valid promo code during checkout to receive a discount before payment.
+>Test Scope
+Test valid and invalid promo codes, expiry dates, minimum order value, one-time use, discount calculation, and checkout flow. Out of scope: payment gateway internals and restaurant menu changes.
+
+Roles & Responsibilities
+1.Tester: create and execute test cases, report bugs, retest fixes.
+2.Developer: fix reported issues.
+3.Test Lead: review test results and approve testing completion.
+4.Test Environment
+5.Android and iOS mobile apps, stable internet connection, test user accounts, latest app version, staging/test server.
+6.Test Deliverables
+7.Test plan, test cases, bug reports, test execution report, final test summary.
+
+
