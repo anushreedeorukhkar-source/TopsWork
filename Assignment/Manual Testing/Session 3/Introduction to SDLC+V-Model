@@ -1,0 +1,56 @@
+1.Draw the V-Model diagram on paper or using any digital tool, and clearly label each phase with both the developer and tester roles involved at each step.
+
+
+2.Pick any app you use daily (like Zomato, Instagram, or Paytm) and write a short table mapping each SDLC phase (Requirement, Design, Coding, Testing, Deployment, Maintenance) to a real activity that would happen for that app.
+Answer: Example for Instagram application. 
+
+1)Requirement phase:
+For Instagram, the Requirement phase starts when the users or the business team request a new feature such as the ability to schedule the posts.The development team gathers these requirements, understands what users need, and prepares a plan for the feature.
+2)Design phase:
+In the Design phase, the UI/UX designers create the screens and layouts for the new scheduling feature, while the software architects designs how the feature will work with the existing system and database.
+3)Coding phase:
+During the coding phase, developers write the codes to allow users to schedule posts, save the scheduled content, and send notifications when the post is published.
+4)Testing phase:
+In the testing phase, testers check whether the scheduled posts are published at the correct time, verify that notifications work properly, and ensure there are no bugs and errors.
+5)Deployment phase: 
+After successful testing, the feature moves to the deployment phase, where it is released to the users through an update on the Google Play Store and Apple Play Store.
+6)Maintenance Phase:
+Finally in the maintenance phase, developers monitor the feature, fix any bugs reported by users, improve its performance,. and add new enhancements based on user feedback. 
+
+
+
+3.For each phase of the V-Model, list one specific testing activity that should be performed, using examples from a food delivery app (like Swiggy or Zomato).<br><br><em><strong>Hint:</strong> For example, during 'System Testing', you might test if the order placement works end-to-end.</em>
+Answer:
+1)Requirement Analysis – Acceptance Test Planning: Prepare test scenarios to check requirements such as user login, restaurant search, food ordering, and payment.
+2)System Design – System Test Planning: Plan tests to verify that all major parts of the food delivery app work together correctly.
+3)High-Level Design – Integration Testing: Test the interaction between modules, such as the restaurant, order, payment, and delivery systems.
+4)Low-Level Design – Unit Test Planning: Prepare test cases for individual functions, such as calculating the bill or applying a discount coupon.
+5)Coding/Implementation – Unit Testing: Test individual functions, such as checking whether the total order amount is calculated correctly.
+6)Integration Testing – Integration Testing: Verify that successful payment correctly confirms and creates the food order.
+7)System Testing – System Testing: Test the complete process from selecting food and placing an order to payment and delivery tracking.
+8)Acceptance Testing – User Acceptance Testing (UAT): Verify that the food delivery app meets customer and business requirements, such as successfully ordering and receiving food.
+
+
+
+4.Compare the V-Model and RAD Model by listing 3 strengths and 2 weaknesses of each, focusing on how testing is handled in both models.
+Answer :
+
+>> V-Model
+Strengths:
+-Testing is planned from the beginning, with a corresponding testing phase for each development phase.
+-It provides systematic and well-documented testing, making defects easier to identify early.
+-Test cases and requirements are clearly linked, ensuring good test coverage.
+
+Weaknesses:
+-Testing starts formally after the development phase, so changes in requirements can be costly.
+-It is less flexible when requirements change during development.
+
+>>RAD Model
+-Strengths:
+-Testing is performed continuously during rapid development and prototyping.
+-Frequent user feedback helps identify and fix defects quickly.
+-Changes can be tested and implemented quickly in each development cycle.
+
+Weaknesses:
+-Fast development may result in less detailed testing and documentation.
+-Continuous changes and short development cycles can make complete testing difficult.
