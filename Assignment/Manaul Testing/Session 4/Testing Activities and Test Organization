@@ -1,0 +1,31 @@
+1.Pick any one app you use daily (like Zomato, Instagram, or Paytm) and list 6 specific testing activities you would perform before its latest feature release. For each activity, write 1 line describing what it checks.
+Answer:
+
+>>Example for Instagram app
+1)Functional Testing – Checks whether the new Instagram feature works correctly according to the requirements.
+2)Integration Testing – Checks whether the new feature works properly with existing features like posts, stories, messages, and notifications.
+3)UI Testing – Checks that buttons, icons, screens, and layouts are displayed correctly and are easy to use.
+4)Performance Testing – Checks whether Instagram loads quickly and the new feature works smoothly without delays or crashes.
+5)Security Testing – Checks that user accounts, passwords, messages, and personal data are properly protected.
+6)Regression Testing – Checks that the new feature has not affected existing functions such as uploading posts, viewing stories, liking, commenting, and messaging.
+
+
+
+2.Create a responsibility matrix (RACI chart) for a test team working on a new Flipkart-style shopping cart feature. Include at least 4 roles: Tester, Test Leader, Developer, and Product Owner. Assign who is Responsible, Accountable, Consulted, and Informed for each of these activities: Test Planning, Test Case Design, Test Execution, Bug Reporting.
+
+
+3.Write a brief job description (3-4 lines) for the role of a Test Leader in a team testing a new BookMyShow movie booking feature. Focus on daily responsibilities and decision-making areas.
+Answer:
+Test Leader – BookMyShow Movie Booking Feature
+The Test Leader plans and manages daily testing activities for the new movie booking feature. They assign tasks to testers, monitor test progress, and review test results and defects. They decide testing priorities, assess risks, and determine whether the feature is ready for release. They also coordinate with developers and the Product Owner to resolve critical issues.
+
+
+4.Define a list of at least 5 testing activities needed for a small project to add a 'Dark Mode' toggle in a music app like Spotify. For each activity, specify whether it should be done by the Tester or Test Leader.<br><br><em><strong>Hint:</strong> Think about planning, designing, executing, and reviewing tests for this feature.</em>
+Answer:
+Testing Activities for Dark Mode Feature – Music App
+a)Test Planning – Test Leader: Defines the testing scope, objectives, resources, and schedule for the Dark Mode feature.
+b)Test Case Design – Tester: Creates test cases to check enabling, disabling, and switching between Light and Dark Mode.
+c)Test Environment Setup – Tester: Prepares different devices, browsers, and app versions required for testing.
+d)Test Execution – Tester: Executes the test cases and checks whether Dark Mode works correctly across all screens.
+e)Defect Reporting – Tester: Reports issues such as incorrect colors, unreadable text, or Dark Mode settings not being saved.
+f)Test Result Review – Test Leader: Reviews test results and defects and decides whether the Dark Mode feature is ready for release.
