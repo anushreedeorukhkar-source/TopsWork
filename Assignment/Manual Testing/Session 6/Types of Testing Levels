@@ -1,0 +1,91 @@
+1.Write a unit test scenario for the 'Add to Cart' function in a shopping app like Flipkart, focusing on what should be tested at the smallest code level (e.g., adding an item updates the cart count).
+Answer :
+Test Scenario: Verify that the Add to Cart function correctly adds a product and updates the cart count.
+
+Precondition: Cart is empty and a valid product is available.
+Test Input: Product ID = P101.
+Test Steps: Call the addToCart() function with product P101.
+Expected Result: The product should be added to the cart, and the cart count should increase from 0 to 1.
+Actual Result: To be recorded during test execution.
+Test Type: Unit Testing
+Focus: Verify only the addToCart() function at the code level, without testing the complete Flipkart application.
+
+
+
+2.Describe an integration testing scenario for a payment flow in a food delivery app like Zomato, where you need to test the interaction between the order placement module and the payment gateway.
+Answer : 
+Scenario: Verify the interaction between the Order Placement Module and the Payment Gateway.
+
+Test Steps:
+
+Select a restaurant and add food items to the cart.
+Proceed to checkout and confirm the order details.
+Select a payment method such as UPI, card, or net banking.
+The Order Placement Module should send the order amount and transaction details to the Payment Gateway.
+Complete the payment successfully.
+Verify that the Payment Gateway sends the payment confirmation back to the application.
+Check that the order status changes to “Order Confirmed” only after successful payment.
+
+Expected Result: The order amount and payment details should be correctly exchanged between the Order Placement Module and Payment Gateway. A successful payment should confirm the order, while a failed or cancelled payment should not create a confirmed order.
+
+Testing Focus: This integration test checks whether the two modules communicate correctly and handle successful, failed, and cancelled payment responses properly.
+
+
+
+3.Write a system testing scenario for the ticket booking process in an app like BookMyShow, covering the entire end-to-end flow from searching for a movie to receiving a booking confirmation.
+Answer : 
+Scenario: Verify the complete end-to-end movie ticket booking process.
+
+Test Steps:
+
+Open the BookMyShow-style application and log in.
+Search for a movie by entering its name.
+Select the movie and choose a city, theatre, date, and showtime.
+Select the required seats and proceed to payment.
+Make the payment using a valid payment method.
+Verify that the payment is successful.
+Check that the booking is confirmed and a booking ID/ticket is generated.
+Verify that the confirmation is displayed in the app and sent through the configured notification method.
+
+Expected Result: The user should be able to successfully search for a movie, select a show and seats, complete payment, and receive a valid booking confirmation with the correct movie, theatre, showtime, seats, and booking details.
+
+Testing Focus: This system test verifies that all major components—movie search, theatre/show selection, seat booking, payment, and confirmation—work together correctly as one complete application.
+
+
+
+4.Create an acceptance testing (UAT/SAT) scenario for a new playlist feature in a music app like Spotify, focusing on how a real user would verify that the feature meets their needs.
+Answer : 
+Scenario: Verify that a real user can create and manage a playlist easily and that the feature meets the expected business and user requirements.
+
+Test Steps:
+
+Log in to the music app.
+Create a new playlist and enter a playlist name.
+Search for a song and add it to the playlist.
+Add multiple songs and verify that they appear in the correct order.
+Remove a song from the playlist.
+Close and reopen the app and check that the playlist is still saved.
+Play songs directly from the playlist.
+
+Expected Result: The user should be able to easily create, edit, save, and play a playlist without errors. All added and removed songs should be correctly reflected, and the playlist should remain available after reopening the app.
+
+Acceptance Criteria: The feature is accepted when real users confirm that the playlist functionality is easy to use, works as expected, saves their changes correctly, and satisfies the defined requirements.
+
+
+5.Write a scenario for either alpha or beta testing for a new group chat feature in a messaging app like WhatsApp, specifying who would perform the test and what feedback is expected.<br><br><em><strong>Hint:</strong> Think about internal employees vs. real users and the types of issues they might report.</em>
+Answer :
+Scenario: Test the new Group Chat feature with a limited group of real users before the full release.
+
+>>Who will perform the testing:
+A selected group of real users/beta testers will use the feature in their normal day-to-day conversations. Unlike alpha testing, which is usually performed internally by employees, beta testing is performed by actual users in real-world conditions.
+
+Testing Activities:
+
+a)Create a new group and add multiple participants.
+b)Send and receive text messages, images, videos, and documents.
+c)Add or remove participants and change group information.
+d)Check message notifications and message delivery status.
+e)Test the feature on different devices and network conditions.
+
+Expected Feedback:
+Users should report issues such as messages not being delivered, delayed notifications, difficulty adding members, app crashes, slow performance, UI problems, or privacy/security concerns.
