@@ -1,0 +1,125 @@
+1.List the 7 main phases of the Software Testing Life Cycle (STLC) and write one line describing what happens in each phase for a Login feature like the one in Instagram or Paytm.
+Answer: 7 Main Phases of STLC for Login Feature
+1>Requirement Analysis – 
+Identify login requirements such as valid credentials, invalid passwords, forgot password, and account lockout.
+2>Test Planning – 
+Decide the testing approach, resources, tools, schedule, and types of testing needed for the login feature.
+3>Test Case Design – 
+Create test cases for valid/invalid login, empty fields, incorrect passwords, and security checks.
+4>Test Environment Setup – 
+Prepare the required app version, devices, browsers, test accounts, and database/environment for testing.
+5>Test Execution – 
+Execute the login test cases and record whether each test passes or fails.
+6>Defect Reporting & Tracking – 
+Report login issues such as incorrect error messages or login failure and track them until they are fixed.
+7>Test Closure – 
+Review test results, confirm that major defects are resolved, and prepare the final testing report before release.
+
+
+
+2.For a Flipkart-style Login module, create a table that lists the entry and exit criteria for each STLC phase (Planning, Monitoring, Analysis, Design, Implementation, Execution, Reporting, Closure).
+Answer:
+
+Entry and Exit Criteria for STLC for Flipkart-Style Login Module
+1.Planning:
+Entry: Login requirements and project scope are available.
+Exit: Test plan is prepared, reviewed, and approved.
+2.Monitoring:
+Entry: Testing activities have started.
+Exit: Testing progress, risks, and defects are monitored and reported regularly.
+3.Analysis:
+Entry: Approved login requirements are available.
+Exit: Test conditions, risks, and required testing types are identified.
+4.Design:
+Entry: Test conditions and requirements are identified.
+Exit: Test cases, test data, and expected results are prepared and reviewed.
+5.Implementation:
+Entry: Test cases and test data are ready.
+Exit: Test environment is configured and ready for execution.
+6.Execution:
+Entry: Login build and stable test environment are available.
+Exit: Test cases are executed and defects are reported and tracked.
+7.Reporting:
+Entry: Test execution results and defect details are available.
+Exit: Test summary report is prepared with pass/fail results, defects, and coverage.
+8.Closure:
+Entry: Testing is completed and exit criteria are satisfied.
+Exit: Testing is formally closed, final results are approved, and lessons learned are documented.
+
+
+
+
+3.Write a sample Test Plan section (max 1 page) for the Login module of a Zomato-like app, including objectives, scope, resources, and schedule. Focus on what will be tested, who will test, and the timeline for testing the Login feature.
+Answer:
+Sample Test Plan for Login Module of a Zomato-Like App
+
+1.) Test Plan Objective
+The objective is to verify that the Login module works correctly, securely, and reliably. Testing will ensure that users can log in with valid credentials and receive proper messages for invalid or incomplete information.
+
+2.) Test Scope
+The following areas will be tested:
+
+Login using valid and invalid mobile number/email and password.
+Validation of empty, incorrect, and invalid input fields.
+OTP-based login and OTP verification.
+Forgot password functionality.
+Login/logout functionality and session handling.
+Error messages and UI of the Login screen.
+Security and basic performance of the login process.
+Compatibility across supported browsers and mobile devices.
+
+3.) Resources and Responsibilities
+
+Test Leader: Prepares the test plan, assigns tasks, monitors progress, and reviews test results.
+Tester/QA: Designs and executes test cases, reports defects, performs retesting and regression testing.
+Developer: Fixes reported defects and supports technical issues during testing.
+Product Owner: Clarifies requirements and approves the final feature for release.
+
+4.) Test Environment
+Testing will be performed on the latest application build using supported Android/iOS devices and major web browsers. Test accounts and valid/invalid login credentials will be used as test data.
+
+5.) Testing Schedule
+
+Day 1: Requirement analysis and test planning.
+Day 2: Test case and test data preparation.
+Day 3: Test environment setup and test execution.
+Day 4: Defect reporting, retesting, and regression testing.
+Day 5: Final test report, review, and test closure.
+
+6.) Expected Outcome
+The Login module will be considered ready for release when all critical test cases pass, no critical or high-severity defects remain open, and the Test Leader approves the final test results
+
+
+
+
+4.Design 3 test cases for the Login module of a BookMyShow-style app, covering positive, negative, and boundary scenarios. Include test steps, expected results, and actual results columns.
+Answer :
+1. Positive Test Case – Login with Valid Credentials
+Test Steps: Open the Login page, enter a registered mobile number/email and correct password or OTP, then click Login.
+Expected Result: The user should be successfully logged in and redirected to the home page.
+Actual Result: To be filled during test execution.
+
+2. Negative Test Case – Login with Invalid Credentials
+Test Steps: Open the Login page, enter an incorrect mobile number/email or password, and click Login.
+Expected Result: Login should fail and an appropriate error message should be displayed.
+Actual Result: To be filled during test execution.
+
+3. Boundary Test Case – Maximum Input Length
+Test Steps: Open the Login page and enter credentials with the maximum number of characters allowed, then click Login.
+Expected Result: The system should accept input up to the allowed limit and should not crash or behave unexpectedly.
+Actual Result: To be filled during test execution.
+
+
+
+
+5.After executing your test cases, write a short Test Summary Report for the Login module, mentioning how many tests passed, failed, and any major issues found. Imagine you are sending this summary to your team lead after finishing Login testing.
+Answer :
+Module: BookMyShow-Style Login
+Total Test Cases: 3
+Testing Status: Completed
+
+Testing of the Login module was completed using positive, negative, and boundary test scenarios. Out of 3 test cases, 2 passed and 1 failed.
+
+The positive login test and maximum input-length boundary test passed successfully. The negative login test failed because the application did not display the expected error message for invalid credentials.
+
+Major Issue Found: Invalid login credentials are not handled correctly, which may confuse users and should be fixed before release.
