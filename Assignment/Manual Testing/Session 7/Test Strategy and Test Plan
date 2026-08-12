@@ -1,0 +1,173 @@
+1.>Pick any one app you use daily (like Zomato, Instagram, or Paytm) and write a detailed test plan for its login feature, including at least these components: objective, scope, test items, features to be tested, features not to be tested, test deliverables, schedule, and responsible roles.
+Answers :
+
+1. Objective
+The objective is to verify that the Instagram login feature works correctly, securely, and reliably. Testing will ensure that users can log in with valid credentials and that invalid or incomplete login attempts are handled properly.
+
+2. Scope
+Testing will cover the complete login process, including entering credentials, authentication, error handling, password recovery, and account access. Functional, UI, security, compatibility, and basic performance testing will be performed.
+
+3. Test Items
+The main test items are:
+
+-Instagram Login screen
+-Username/email/phone number field
+-Password field
+-Login button
+-Error messages
+-Forgot Password option
+-Login authentication and session handling
+-Remembered login/session behavior
+
+4. Features to Be Tested
+
+-Login with valid username/email/phone number and password.
+-Login with invalid credentials.
+-Login with empty or incomplete fields.
+-Password field masking and validation.
+-Forgot password functionality.
+-Login button functionality.
+-Appropriate error messages for failed login attempts.
+-Account lockout or security checks after repeated failed attempts.
+-Login functionality on different devices and supported browsers.
+-Session creation after successful login and logout behavior.
+
+5. Features Not to Be Tested
+The following features are outside the scope of this login test plan:
+
+-Creating a new Instagram account.
+-Posting photos, videos, or stories.
+-Direct messaging.
+-Likes, comments, and followers.
+-Instagram shopping and advertising features.
+-Detailed testing of the application's feed and recommendation system.
+
+6. Test Deliverables
+The following deliverables will be prepared:
+
+-Test Plan document.
+-Test scenarios and test cases.
+-Test data.
+-Defect/bug reports.
+-Test execution results.
+-Regression testing results.
+-Final Test Summary Report.
+
+7. Test Schedule
+
+Day 1: Requirement analysis and test planning.
+Day 2: Test scenario, test case, and test data preparation.
+Day 3: Test environment setup and functional testing.
+Day 4: Negative, security, compatibility, and performance testing.
+Day 5: Defect retesting, regression testing, and final test reporting.
+
+8. Responsible Roles
+-Test Leader: Prepares the test plan, assigns testing tasks, monitors progress, manages risks, and reviews final results.
+-Tester/QA: Designs and executes test cases, reports defects, performs retesting and regression testing.
+-Developer: Investigates and fixes reported login defects.
+-Product Owner: Clarifies requirements and confirms that the login feature meets business expectations.
+-Test Manager: Provides overall testing direction and approves major testing decisions.
+
+
+
+
+
+
+
+2.>Create a mini test strategy document for the search functionality in a movie ticket booking app (like BookMyShow), specifying your approach to test levels (unit, integration, system), test types (functional, non-functional), and tools you would use.<br><br><em><strong>Hint:</strong> Mention at least one tool for each test level or type.</em>
+Answer :
+
+1. Objective
+The objective is to verify that the search functionality allows users to quickly and accurately find movies, theatres, or locations based on their search input.
+
+2. Test Levels
+Unit Testing:
+Test individual components of the search feature, such as search input validation, keyword matching, filters, and sorting logic.
+Tool: JUnit 
+
+Integration Testing:
+Verify that the search module works correctly with the database, movie API, location service, and filtering system. For example, check whether entering a movie name retrieves the correct movie data from the database.
+Tool: Postman for API testing.
+
+System Testing:
+Test the complete search functionality from the user's point of view. For example, search for a movie, select a city, apply filters, and verify that the correct results are displayed.
+Tool: Selenium.
+
+3. Test Types
+Functional Testing:
+Verify features such as:
+
+Searching by movie name.
+Searching by actor or language.
+Searching by theatre or city.
+Handling partial and incorrect search terms.
+Checking filters such as language, genre, and format.
+Verifying that relevant search results are displayed.
+Checking the "No results found" message.
+
+Tools: Selenium and Postman.
+
+Non-Functional Testing:
+Check the performance, usability, compatibility, and reliability of the search feature. For example, verify that search results appear quickly even when many users are searching at the same time.
+Tools: JMeter for performance testing and BrowserStack for browser/device compatibility testing.
+
+4. Test Environment
+Testing will be performed on different browsers and devices using test movie, theatre, and location data. Both valid and invalid search inputs will be used.
+
+5. Entry Criteria
+Search requirements are clearly defined.
+Search functionality is developed and available for testing.
+Test data and test environment are ready.
+6. Exit Criteria
+All planned test cases are executed.
+Critical and high-severity defects are fixed and retested.
+Search functionality works correctly across supported browsers and devices.
+No major blocking defects remain.
+
+7. Overall Approach
+Testing will start with unit testing, followed by integration testing, and then system testing. Both functional and non-functional testing will be performed to ensure that the search feature is correct, fast, user-friendly, reliable, and compatible across different platforms.
+
+
+
+
+3.>List and explain three key differences between a test plan and a test strategy, using examples from any food delivery or e-commerce app you know.
+Answer :
+>>Test plan
+1)A Test Plan describes what needs to be tested for a specific project, feature, or release. It explains the testing activities, resources, schedule, and responsibilities.
+-For example, for Zomato’s new online payment feature, the test plan may specify that testers will test payment using UPI, credit cards, and wallets.
+2)A Test Plan is more detailed and specific. It focuses on a particular project or feature and includes details such as test environment, test schedule, test data, and responsibilities.
+-For example, the test plan for Zomato’s order placement feature may specify which devices, browsers, test accounts, and test cases will be used.
+3)A Test Plan is usually prepared by the Test Lead or QA team for a particular project or release. It can be updated when project requirements or schedules change.
+-For example, before releasing a new Zomato app version, the QA team can create a test plan covering login, restaurant search, cart, payment, and order tracking.
+
+>>Test Strategy
+1)A Test Strategy describes the overall approach and methods that will be followed for testing. It provides a high-level direction for the testing process.
+-For example, the strategy may state that Zomato will use functional, performance, security, and compatibility testing for important features.
+2)A Test Strategy is broader and gives general guidelines that can be applied across different projects or features.
+-For example, the strategy may define that all critical Zomato features must undergo system testing and regression testing before release.
+3)A Test Strategy is generally created by senior QA managers or test leads and provides long-term testing direction for the organization or project.
+-For example, Zomato's testing strategy may define that automation testing should be used for frequently repeated regression tests, while exploratory testing should be used for new features.
+
+
+
+
+
+
+
+4.>Identify at least two risks, two assumptions, and two dependencies that could affect testing the payment feature in a shopping app (like Flipkart or Myntra).
+Answer :
+a) Risks
+Payment failure: The payment may fail because of network problems, bank server issues, or payment gateway errors. This can result in an unsuccessful transaction even when money is deducted.
+Security risk: Sensitive payment information could be exposed due to security vulnerabilities, creating a risk of fraud or unauthorized transactions.
+b) Assumptions
+Payment gateway is available: We assume that the payment gateway, such as UPI, credit/debit card, or net banking, will be available during testing.
+Test accounts and data are available: We assume that valid test cards, UPI IDs, user accounts, and test orders are provided for testing different payment scenarios.
+c) Dependencies
+Payment gateway: Testing depends on external payment services and banks to process transactions successfully.
+Internet and backend services: Payment testing depends on a stable internet connection and working app backend services such as order management, payment processing, and database systems.
+
+
+
+5.>Given this scenario: Your team is planning to test the 'add to cart' feature in an online grocery app. Write a short paragraph describing how you would update the test plan if a new dependency (like a third-party coupon system) is introduced during the project.<br><br><em><strong>Hint:</strong> Focus on changes to scope, schedule, or deliverables.</em>
+Answer :
+If a new dependency, such as a third-party coupon system, is introduced while testing the Add to Cart feature, I would update the test plan to include coupon-related scenarios in the testing scope. The test schedule may need to be extended to allow time for integration and testing with the third-party system. I would also update the test deliverables by adding new test cases, test data, defect reports, and test results related to coupon application, discount calculation, and invalid or expired coupons. The test environment and dependencies section would also be updated to mention the third-party coupon system.
