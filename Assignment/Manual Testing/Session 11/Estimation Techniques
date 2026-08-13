@@ -1,0 +1,89 @@
+1.Pick any one feature from an app you use daily (for example: 'Search Restaurants' in Zomato or 'Add to Cart' in Flipkart) and break down the testing tasks for this feature using a Work Breakdown Structure (WBS) — list at least 6 distinct testing activities or sub-tasks.
+Answer :
+1. Requirement Analysis
+Understand the Add to Cart requirements and business rules.
+2. Test Case Preparation
+Create positive and negative test cases for adding products.
+3. Functional Testing
+Verify that products are added correctly to the cart.
+4. Validation Testing
+Check product name, price, quantity, stock, and cart count.
+5. Negative Testing
+Test out-of-stock products, invalid products, and network failures.
+6. Integration Testing
+Verify Add to Cart works correctly with product details, inventory, and cart modules.
+7. Regression Testing
+Check that changes to the cart feature do not affect other shopping functions.
+8. Defect Reporting & Retesting
+Report bugs, verify fixes, and close resolved defects.
+
+
+
+2.For the 'Send Message' feature in WhatsApp, estimate the total test effort required by listing all the main test activities, assigning estimated hours to each, and calculating the overall effort needed.<br><br><em><strong>Hint:</strong> Consider activities like test case design, test execution, defect reporting, and regression testing.</em>
+Answer :
+Test Effort Estimation – WhatsApp “Send Message” Feature
+1)Requirement Analysis – 2 hours
+Understand the requirements and message-sending flow.
+2)Test Case Design – 4 hours
+Create positive and negative test cases.
+3)Test Data Preparation – 2 hours
+Prepare users, contacts, messages, and test scenarios.
+4)Test Environment Setup – 2 hours
+Set up devices, accounts, and network conditions.
+5)Test Execution – 6 hours
+Execute all test cases and record results.
+6)Defect Reporting – 3 hours
+Report and track defects found during testing.
+7)Retesting – 2 hours
+Verify that fixed defects are working correctly.
+8)Regression Testing – 4 hours
+Check that changes have not affected other features.
+9)Test Summary Report – 1 hour
+Prepare the final testing report.
+
+Total Estimated Effort = 26 hours, which is approximately 3–4 working days for one tester.
+
+
+
+
+3.Given the following scenario: Flipkart's 'Apply Coupon' feature is being released as a small module. Using the steps of test effort estimation discussed in class, create a simple estimation sheet (table) showing each test activity, estimated hours, and any assumptions you make.
+Answer :
+
+1)Requirement Analysis – 2 hours
+-Understand the coupon rules, eligibility, expiry, and discount conditions.
+2)Test Case Design – 4 hours
+-Prepare positive, negative, and boundary test cases.
+3)Test Data Preparation – 2 hours
+-Prepare valid, invalid, expired, and minimum-order-value coupons.
+4)Test Environment Setup – 1 hour
+-Set up the application and required test environment.
+5)Test Execution – 5 hours
+-Execute all test cases and record the results.
+6)Defect Reporting – 2 hours
+-Report and track defects found during testing.
+7)Retesting – 2 hours
+-Verify that the reported defects have been fixed.
+8)Regression Testing – 3 hours
+-Check that the coupon changes have not affected the cart and checkout features.
+9)Test Summary Report – 1 hour
+-Prepare the final testing summary.
+
+Total Estimated Effort = 22 hours, approximately 3 working days for one tester.
+
+Assumptions: Requirements are clear, the test environment is ready, test coupons are available, and there are no major changes during testing.
+
+
+
+4.Read about Test Point Analysis (TPA) as introduced in class. In your own words, explain how TPA could help estimate testing effort for a new 'Movie Booking' feature in BookMyShow. List two advantages and one limitation of using TPA for this purpose.<br><br><em><strong>Hint:</strong> You do not need to do full TPA calculations, just explain the concept and its application.</em>
+Topic Repository URL
+Answer :
+Test Point Analysis (TPA) is a technique used to estimate the amount of testing effort required by looking at the size and complexity of a feature. Instead of simply guessing the number of hours, we identify different testing areas and assign points based on their complexity.
+For a Movie Booking feature in BookMyShow, we can consider activities such as movie search, selecting a theatre and showtime, choosing seats, applying offers, making payment, and receiving booking confirmation. More complex functions, such as seat selection and payment, would receive higher test points. The total points can then be used to estimate the testing time and resources required.
+
+Two advantages:
+Better estimation: It provides a more structured way to estimate testing effort instead of relying only on personal judgment.
+Considers complexity: Complex areas such as payment and seat booking can be given more weight than simple functions.
+
+One limitation:
+Requires experience: The accuracy of TPA depends on how correctly the tester assigns points to different features. Different testers may estimate complexity differently.
+
