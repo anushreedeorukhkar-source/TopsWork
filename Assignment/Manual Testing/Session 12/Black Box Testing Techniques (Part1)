@@ -1,0 +1,110 @@
+1.Write equivalence partitioning (EP) test cases for the phone number input field in a Zomato-style food order form, where the field must accept exactly 10 digits and no letters or special characters.
+Answer :
+Requirement: Phone number must contain exactly 10 digits and must not contain letters or special characters.
+
+EP divides the input into valid and invalid groups, then tests one value from each group.
+
+1)Valid Partition – Exactly 10 digits
+Test Data: 9876543210
+2)Expected Result: Phone number should be accepted.
+Invalid Partition – Less than 10 digits
+3)Test Data: 987654321
+Expected Result: Phone number should be rejected with an appropriate error message.
+4)Invalid Partition – More than 10 digits
+Test Data: 98765432101
+5)Expected Result: Phone number should be rejected.
+Invalid Partition – Contains letters
+6)Test Data: 98765abc10
+Expected Result: Phone number should be rejected.
+7)Invalid Partition – Contains special characters
+Test Data: 98765@3210
+8)Expected Result: Phone number should be rejected.
+Invalid Partition – Empty field
+9)Test Data: Blank
+Expected Result: Phone number should be rejected and a required-field message should be displayed.
+
+
+
+2.For a Flipkart-style sign-up form with a password field that must be 8-16 characters long, write boundary value analysis (BVA) test cases to check the minimum, just above minimum, maximum, and just above maximum password lengths.<br><br><em><strong>Hint:</strong> Consider test cases for 7, 8, 9, 15, 16, and 17 characters.</em>
+Answer :
+Requirement: Password must contain 8–16 characters.
+
+1)7 characters – Below minimum
+Test Data: Abc1234
+Expected Result: Password should be rejected.
+2)8 characters – Minimum boundary
+Test Data: Abc12345
+Expected Result: Password should be accepted.
+3)9 characters – Just above minimum
+Test Data: Abc123456
+Expected Result: Password should be accepted.
+4)15 characters – Just below maximum
+Test Data: Abc123456789012
+Expected Result: Password should be accepted.
+5)16 characters – Maximum boundary
+Test Data: Abc1234567890123
+Expected Result: Password should be accepted.
+6)17 characters – Above maximum
+Test Data: Abc12345678901234
+Expected Result: Password should be rejected
+
+
+
+3.Given an Instagram-like post creation form with a caption input that allows up to 2200 characters, use equivalence partitioning to identify valid and invalid input ranges and write at least 3 test cases for each partition.
+Answer :
+Requirement: Caption allows a maximum of 2200 characters.
+
+>>Valid Partition: 0–2200 characters
+0 characters → Should be accepted if empty captions are allowed.
+100 characters → Should be accepted.
+2200 characters → Should be accepted.
+
+>>Invalid Partition: More than 2200 characters
+2201 characters → Should be rejected or limited to 2200.
+2500 characters → Should be rejected or limited.
+3000 characters → Should be rejected or limited.
+
+Partitions: Valid = 0–2200, Invalid = >2200 characters.
+
+
+4.For a BookMyShow movie ticket booking form with a 'number of tickets' field (allowed: 1 to 10), write BVA test cases to ensure the field correctly handles edge values.
+Answer :
+Requirement: Number of tickets allowed = 1 to 10
+
+1) 0 tickets – Should be rejected.
+2) 1 ticket – Should be accepted. (Minimum boundary)
+3) 2 tickets – Should be accepted. (Just above minimum)
+4) 9 tickets – Should be accepted. (Just below maximum)
+5) 10 tickets – Should be accepted. (Maximum boundary)
+6) 11 tickets – Should be rejected. (Just above maximum)
+
+
+5.Pick any app you use daily (such as Paytm, Myntra, or IRCTC) and select one form field (e.g., amount, pincode, age). Write both equivalence partitioning and boundary value analysis test cases for that field, explaining your reasoning for each.
+Answer :
+Requirement: The payment amount should be between ₹1 and ₹50,000.
+
+1.] Equivalence Partitioning (EP)
+
+I divide the input into valid and invalid groups:
+
+Valid partition: ₹1–₹50,000
+Example: ₹500 → Amount should be accepted.
+Invalid partition: Less than ₹1
+Example: ₹0 → Amount should be rejected.
+Invalid partition: More than ₹50,000
+Example: ₹50,001 → Amount should be rejected.
+
+Reasoning: Each group contains values that should behave similarly, so testing one representative value from each group can identify validation problems.
+
+2.] Boundary Value Analysis (BVA)
+
+Test values around the boundaries ₹1 and ₹50,000:
+
+₹0 → Rejected
+₹1 → Accepted
+₹2 → Accepted
+₹49,999 → Accepted
+₹50,000 → Accepted
+₹50,001 → Rejected
+
+Reasoning: BVA focuses on values at and just outside the limits because validation errors commonly occur at boundaries.
