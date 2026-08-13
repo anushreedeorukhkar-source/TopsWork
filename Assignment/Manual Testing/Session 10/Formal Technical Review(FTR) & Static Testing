@@ -1,0 +1,48 @@
+1.Download a sample SRS (Software Requirements Specification) document for a food delivery app (like Zomato) and perform a peer review by highlighting at least 5 unclear or ambiguous requirements.
+Answer :
+
+
+
+2.Conduct an informal review of a friend's written test case set for a simple login feature (username and password), and write down 3 suggestions or improvements you would make.
+Answer :
+I reviewed my friend’s test cases for a simple Username and Password Login feature. Here are 3 suggestions I would make:
+
+1.>Add negative test cases
+Include cases for an incorrect username, incorrect password, both fields incorrect, and blank username/password fields.
+2.>Add boundary and input validation cases
+Test minimum and maximum username/password lengths and check how the system handles special characters or spaces.
+3.>Make expected results more specific
+Instead of writing “Login should fail,” specify the expected behavior, such as “An ‘Invalid username or password’ message should be displayed and the user should remain on the login screen.”
+
+
+
+
+3.Simulate a walkthrough session by explaining the steps of a test case for 'Add to Cart' functionality (like Flipkart) to a classmate and note any questions or feedback they give you.<br><br><em><strong>Hint:</strong> Focus on whether all steps are clear and if any preconditions or expected results are missing.</em>
+Answer :
+
+Test Steps:
+1)Open the shopping app.
+2)Login with a valid account.
+3)Search for a product.
+4)Open the product.
+5)Click Add to Cart.
+6)pen the cart and check the product.
+Expected Result:
+The product should be added successfully and displayed in the cart with the correct name, price, and quantity.
+
+Classmate Feedback:
+1)Add a precondition that the user must be logged in.
+2)Include an out-of-stock product scenario.
+3)Clearly mention that the cart count should increase after adding the product.
+
+
+
+4.Identify 4 types of errors or issues that static testing (reviewing documents or code without execution) can catch in a test case document for an online movie booking system (like BookMyShow).
+Answer :
+>>4 Issues Static Testing Can Catch in a Movie Booking Test Case
+
+1)Missing Test Steps – Important steps, such as selecting a movie or seat, may be missing.
+2)Incorrect Expected Result – The expected result may not match the actual requirement, e.g., payment success but confirmation is not mentioned.
+3)Incomplete Test Data – Required data such as movie name, date, theatre, or seat number may be missing.
+4)Ambiguous Steps – Steps like “Book a suitable seat” are unclear and should specify exactly what the tester must do.
+
