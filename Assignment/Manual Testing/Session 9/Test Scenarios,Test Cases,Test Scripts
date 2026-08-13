@@ -1,0 +1,160 @@
+1.Pick any one feature from a popular app you use (for example, 'Add to Cart' in Flipkart or 'Send Message' in WhatsApp) and write 5 high-level test scenarios for it. List each scenario clearly.
+Answer :
+Feature: Add to Cart in Flipkart
+a)Add a product to the cart
+-Verify that a user can select a product and successfully add it to the shopping cart.
+b)Add multiple products to the cart
+-Verify that the user can add multiple different products to the cart and all products are displayed correctly.
+c)Update product quantity
+-Verify that the user can increase or decrease the quantity of a product in the cart and the total price is updated correctly.
+d)Remove a product from the cart
+-Verify that the user can remove a product from the cart and the product is no longer displayed.
+e)Check cart after reopening the app
+-Verify that products added to the cart remain available after closing and reopening the app, provided the user is logged in.
+
+2.For the 'Search Restaurant' feature in a Zomato-like app, write 10 specific test scenarios covering both functional and non-functional aspects.<br><br><em><strong>Hint:</strong> Think about different search inputs, filters, empty results, speed, and UI behavior.</em>
+Answer :
+1>Search with a valid restaurant name
+-Verify that entering an existing restaurant name displays the correct restaurant in the search results.
+2>Search using a cuisine name
+-Search for terms such as “Pizza” or “Chinese” and verify that relevant restaurants are displayed.
+3>Search with an invalid restaurant name
+-Enter a restaurant name that does not exist and verify that an appropriate “No results found” message is displayed.
+4>Search with partial keywords
+-Enter only part of a restaurant name, such as “Dom”, and verify that relevant matching restaurants are displayed.
+5>Search with special characters or numbers
+-Enter inputs such as “@#$” or “12345” and verify that the app handles them correctly without crashing.
+6>Search using filters
+-Apply filters such as rating, price range, cuisine, or delivery time and verify that only matching restaurants are displayed.
+7>Clear search and filters
+-Verify that clicking the clear/search reset option removes the entered keyword and filters and shows the default restaurant list.
+8>Search response time
+-Verify that search results are displayed within an acceptable time, for example, within 2–3 seconds under normal network conditions.
+9>UI behavior during search
+-Verify that the search bar, suggestions, filters, loading indicator, and search results are properly aligned and displayed without overlapping or cutting off text.
+10>Search under poor network conditions
+-Verify that the app handles slow or unstable internet properly by showing a loading message or suitable error message instead of freezing or crashing.
+
+
+
+3.Choose one scenario from your Zomato 'Search Restaurant' scenarios and convert it into 5 detailed test cases. Each test case should include: Test Case ID, Steps, Test Data, Expected Result, and Actual Result (leave Actual Result blank).
+Answer :
+1)Test Case 1: Search using an exact restaurant name
+
+Test Case ID: TC_SR_01
+Steps:
+Open the Zomato-like app.
+Tap on the Search bar.
+Enter a valid restaurant name.
+Tap the Search button.
+Test Data: Restaurant name – “Domino’s”
+Expected Result: The search results should display the restaurant matching “Domino’s”.
+Actual Result: 
+
+2)Test Case 2: Search using a restaurant name with different letter cases
+
+Test Case ID: TC_SR_02
+Steps:
+Open the app.
+Tap on the Search bar.
+Enter the restaurant name in lowercase.
+Tap the Search button.
+Test Data: “domino’s”
+Expected Result: Relevant results for Domino’s should be displayed regardless of letter case.
+Actual Result:
+
+3)Test Case 3: Search using a partial restaurant name
+
+Test Case ID: TC_SR_03
+Steps:
+Open the app.
+Tap on the Search bar.
+Enter only part of a restaurant name.
+Tap the Search button.
+Test Data: “Dom”
+Expected Result: Restaurants matching the partial keyword “Dom” should be displayed.
+Actual Result: 
+
+4)Test Case 4: Search with leading and trailing spaces
+
+Test Case ID: TC_SR_04
+Steps:
+Open the app.
+Tap on the Search bar.
+Enter a valid restaurant name with spaces before and after it.
+Tap the Search button.
+Test Data: “ Domino’s ”
+Expected Result: The app should ignore unnecessary spaces and display relevant restaurant results.
+Actual Result:
+
+5)Test Case 5: Search using a restaurant name with special characters
+
+Test Case ID: TC_SR_05
+Steps:
+Open the app.
+Tap on the Search bar.
+Enter a restaurant name containing a special character.
+Tap the Search button.
+Test Data: “Domino’s @”
+Expected Result: The app should handle the special character correctly and display relevant results or an appropriate message without crashing.
+Actual Result:
+
+
+
+4.Download or create a simple test case template in Excel or Google Sheets. Fill it with 4 test cases for the 'Add to Playlist' feature in a Spotify-like app, using the columns: Test Case ID, Scenario, Steps, Test Data, Expected Result.
+Answer :
+
+
+
+5.Write a basic test script (in plain English, not code) for the 'Login with OTP' feature in a Paytm-style app, describing the exact steps a tester would follow to manually test the OTP flow from start to finish.<br><br><em><strong>Constraint:</strong> Include both valid and invalid OTP scenarios in your script.</em>
+Answer :
+Feature: Login with OTP
+Application: Paytm-style mobile app
+
+>>Scenario 1: Valid OTP
+
+Test Steps:
+Open the mobile application.
+Tap on the Login button.
+Enter a valid registered mobile number.
+Tap on Continue/Send OTP.
+Verify that an OTP is received on the registered mobile number.
+Enter the received OTP in the OTP field.
+Tap on Verify/Submit.
+Verify that the user is successfully logged in.
+Check that the user is redirected to the home/dashboard screen.
+
+Expected Result:
+The user should be successfully logged in after entering the correct OTP.
+
+>>Scenario 2: Invalid OTP
+
+Test Steps:
+
+Open the application.
+Tap on Login.
+Enter a valid registered mobile number.
+Tap on Continue/Send OTP.
+Wait for the OTP to be received.
+Enter an incorrect OTP.
+Tap on Verify/Submit.
+Check the message displayed by the application.
+
+Expected Result:
+The login should fail and an appropriate error message such as “Invalid OTP” should be displayed.
+
+>>Scenario 3: Expired OTP
+
+Test Steps:
+
+Open the application and enter a registered mobile number.
+Request an OTP.
+Wait until the OTP expires.
+Enter the expired OTP.
+Tap Verify/Submit.
+
+Expected Result:
+The application should reject the OTP and display a message such as “OTP expired. Please request a new OTP.”
+
+Test Completion:
+The test is completed after verifying that valid OTPs allow login and invalid/expired OTPs are correctly rejected.
