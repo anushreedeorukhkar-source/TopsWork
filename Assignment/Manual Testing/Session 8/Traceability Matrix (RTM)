@@ -1,0 +1,93 @@
+1.)Pick any one feature from a popular app you use daily (for example: Instagram signup, Flipkart add-to-cart, or Paytm recharge) and write 5 clear requirements for that feature.
+Answers :
+-Feature: Flipkart – Add to Cart
+-Product Selection: The user should be able to select a product and add it to the shopping cart.
+-Cart Update: After adding a product, the cart should immediately display the selected product, quantity, price, and total amount.
+-Quantity Management: The user should be able to increase or decrease the quantity of a product in the cart.
+-Stock Validation: The system should prevent users from adding a product to the cart if it is out of stock.
+-Cart Persistence: Products added to the cart should remain saved when the user navigates to other
+
+
+
+2.)For the requirements you wrote in Task 1, create a table mapping each requirement to at least one test case that would verify it works as intended.<br><br><em><strong>Hint:</strong> Your table should have columns: Requirement ID, Requirement Description, Test Case ID, Test Case Description.</em>
+Answer :
+Requirement 1: User should be able to select a product and add it to the cart.
+Test Case 1: Select an available product and click Add to Cart. Verify that the product is successfully added to the cart.
+
+Requirement 2: The cart should display the product, quantity, price, and total amount.
+Test Case 2: Open the cart after adding a product. Verify that the product name, quantity, price, and total amount are displayed correctly.
+
+Requirement 3: User should be able to increase or decrease the product quantity.
+Test Case 3: Increase and decrease the product quantity in the cart. Verify that the quantity and total price are updated correctly.
+
+Requirement 4: The system should prevent users from adding an out-of-stock product to the cart.
+Test Case 4: Select an out-of-stock product and try to add it to the cart. Verify that the product is not added and an appropriate message is displayed.
+
+Requirement 5: Products should remain in the cart when the user navigates to other pages.
+Test Case 5: Add a product to the cart, navigate to another page, and return to the cart. Verify that the product is still present.
+
+
+
+3.)Extend your table from Task 2 by adding a 'Defect ID' column. Imagine that during testing, you find 2 bugs related to your test cases. Link these defects to the relevant test cases in your table.<br><br><em><strong>Hint:</strong> Defects can be things like 'Signup button not enabled' or 'OTP not received'.</em>
+Answer :
+>>Test Case 1 – Signup with valid details
+Requirement: User should be able to sign up.
+Test Scenario: Enter valid details and click the Signup button.
+Expected Result: The account should be created successfully.
+Defect ID: DEF-01
+Defect: Signup button is not enabled even after entering all valid required details.
+>>Test Case 2 – OTP Verification
+Requirement: User should receive OTP.
+Test Scenario: Enter a valid mobile number and request OTP.
+Expected Result: OTP should be received on the registered mobile number.
+Defect ID: DEF-02
+Defect: OTP is not received on the registered mobile number.
+>>Test Case 3 – Enter OTP
+Requirement: User should be able to enter OTP.
+Test Scenario: Enter the received OTP.
+Expected Result: OTP should be accepted and the user should be verified.
+Defect ID: None
+
+
+
+4.)Explain in 3-4 sentences the difference between forward traceability and backward traceability in the context of your table. Give one example of each using your requirements and test cases.
+Answer :
+1.)Forward traceability means checking that every requirement is linked to one or more test cases to make sure all requirements are tested.
+-For example, the requirement “User should be able to sign up” is linked to Test Case TC01.
+2.)Backward traceability means starting from a test case and checking which requirement it was created to test.
+-For example, Test Case TC02, which checks whether the user receives an OTP, can be traced backward to the requirement “User should receive OTP.” This helps ensure that no unnecessary test cases exist and every test case has a valid requirement.
+
+
+
+
+5.)Create a bi-directional RTM (Requirements Traceability Matrix) for the login feature of a food delivery app like Zomato, showing how each requirement is linked to test cases and how test cases trace back to requirements.<br><br><em><strong>Constraint:</strong> Include at least 3 requirements and 5 test cases in your matrix.</em>
+Answer :
+Requirements
+R1: User should be able to log in with valid mobile number and password.
+R2: User should see an error message when incorrect login credentials are entered.
+R3: User should be able to log in using OTP.
+R4: User should be able to use the “Forgot Password” option.
+
+Bi-Directional RTM
+R1 – Valid Login
+Requirement → Test Cases: TC01, TC02
+TC01 → Verify login with valid mobile number and password.
+TC02 → Verify login with valid credentials after entering all required fields.
+
+R2 – Invalid Login
+Requirement → Test Cases: TC03
+TC03 → Verify that an error message is displayed for an incorrect password.
+
+R3 – OTP Login
+Requirement → Test Cases: TC04
+TC04 → Verify that the user can log in successfully using a valid OTP.
+
+R4 – Forgot Password
+Requirement → Test Cases: TC05
+TC05 → Verify that the user can reset the password using the “Forgot Password” option.
+Backward Traceability
+TC01 → R1: Valid login test traces back to the valid login requirement.
+TC02 → R1: Required-field/login validation test traces back to R1.
+TC03 → R2: Invalid credentials test traces back to the error-handling requirement.
+TC04 → R3: OTP login test traces back to the OTP login requirement.
+TC05 → R4: Forgot password test traces back to the password recovery requirement.
