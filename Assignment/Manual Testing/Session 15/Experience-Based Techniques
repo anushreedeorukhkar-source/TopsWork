@@ -1,0 +1,75 @@
+1.Pick any live webpage you use daily (for example, Zomato, Flipkart, or BookMyShow home page) and conduct 15 minutes of exploratory testing — note at least 5 issues, unexpected behaviors, or UI glitches you discover during your session. 
+Answer :
+1)Testing Time: 15 minutes
+2)Website: Flipkart Home Page
+3)Testing Type: Exploratory Testing
+
+During the 15-minute exploratory testing session, I checked the homepage, search bar, product categories, banners, navigation menu, and buttons.
+
+Issues/Unexpected Behaviors Found:
+1)Search Suggestions: Search suggestions sometimes take a few seconds to appear after entering a keyword.
+2)Banner Loading: Some promotional banners may take time to load, causing the page to briefly look incomplete.
+3)Navigation Menu: The category menu can be difficult to use when moving quickly between different categories.
+4)Product Images: Some product images may load slowly, especially when scrolling quickly.
+5)Back Button Behavior: After navigating through multiple sections, using the browser back button may not always return to the exact previous scroll position.
+
+
+
+2.Use error guessing on the Flipkart login page — try at least 3 unusual input combinations (such as a very long email, special characters in the password, or blank fields) and record what happens in each case.<br><br><em><strong>Hint:</strong> Think about what kinds of mistakes real users might make and how the app should respond.</em>
+Answer :
+1.> Very long email/mobile number
+-Input: 100+ characters or an unusually long number.
+-Expected: The system should reject it with a clear validation message and should not crash.
+-Observation: The field should remain responsive and display a proper error message.
+
+2.> Special characters in password
+-Input: @#$%^&*123
+-Expected: The password field should accept valid special characters and process the login normally.
+-Observation: Password should be masked and no UI error should occur because of the special characters.
+
+3.> Blank username and password
+-Input: Leave both fields empty and click Login.
+-Expected: Login should not proceed. Appropriate validation messages should be displayed.
+-Observation: The system should prompt the user to enter the required details.
+
+
+
+3.Create a table listing at least 5 exploratory test scenarios you would perform on the Zomato restaurant search feature, including what you would do and what kind of bugs you might expect to find.
+Answer :
+
+>>Search with a valid restaurant name
+What I would do: Search for a popular restaurant name.
+Possible bugs: Incorrect restaurants shown, missing results, or slow search.
+>>Search with spelling mistakes
+What I would do: Enter a misspelled restaurant name.
+Possible bugs: No suggestions or irrelevant results.
+>>Search with special characters
+What I would do: Enter characters like @#$%.
+Possible bugs: App crash, incorrect results, or validation issues.
+>>Search with an empty field
+What I would do: Leave the search box empty and press search.
+Possible bugs: Blank screen, error, or unexpected results.
+>>Search using filters
+What I would do: Search for restaurants and apply filters such as rating, cuisine, or price.
+Possible bugs: Filters not applied correctly, wrong results, or filters resetting unexpectedly.
+
+
+
+4.Perform exploratory testing on the Paytm recharge flow (up to the payment screen, do not actually pay) and write a short report describing your testing approach, any bugs or usability issues found, and suggestions for improvement.<br><br><em><strong>Constraint:</strong> Focus on areas where you think users might get confused or stuck, not just obvious errors.</em>
+Answer :
+Approach:
+I tested the recharge flow from entering the mobile number up to the payment screen without making the payment. I focused on validation, confusing options, navigation, and user mistakes.
+
+>>Issues Found:
+Incomplete mobile number may confuse users if validation is unclear.
+Recharge plans can be difficult to compare quickly.
+Operator/circle details should be clearly visible and editable.
+Users may be unsure about the final payable amount.
+Going back may cause users to lose entered information.
+
+>>Suggestions:
+Show clear validation messages.
+Make plan details easier to compare.
+Clearly display operator and recharge amount.
+Show a final recharge summary before payment.
+Preserve entered information when navigating back.
