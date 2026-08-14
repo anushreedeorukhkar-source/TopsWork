@@ -1,0 +1,132 @@
+1.Given the following pseudo-code for a function that calculates delivery charges based on order amount, write white-box test cases to achieve 100% statement coverage.
+
+function calculateDeliveryCharge(amount):
+if amount >= 500:
+return 0
+else:
+return 50
+
+Answer :
+White-Box Test Cases for 100% Statement Coverage
+The function has two statements that return different values, so we need to execute both branches.
+
+Test Case 1:
+Input: amount = ₹500
+Condition: amount >= 500 → True
+Expected Result: Delivery charge = ₹0
+
+Test Case 2:
+Input: amount = ₹400
+Condition: amount >= 500 → False
+Expected Result: Delivery charge = ₹50
+
+Conclusion:
+These 2 test cases achieve 100% statement coverage because both the return 0 and return 50.
+
+
+2.Write white-box test cases for the following pseudo-code to achieve full branch coverage:
+
+function getDiscount(userType, total):
+if userType == "student":
+if total > 1000:
+return 20
+else:
+return 10
+else:
+return 5
+Answer :
+
+>>Test Case 1: Student with total above ₹1000
+User Type: student
+Total: 1500
+userType == "student" → True
+total > 1000 → True
+Expected Result: 20% discount
+
+>>Test Case 2: Student with total ₹1000 or below
+User Type: student
+Total: 800
+userType == "student" → True
+total > 1000 → False
+Expected Result: 10% discount
+
+>>Test Case 3: Non-student user
+User Type: regular
+Total: 1500
+userType == "student" → False
+Expected Result: 5% discount
+
+Branch Coverage:
+Outer if True → Test Case 1 and 2
+Outer if False → Test Case 3
+Inner if True → Test Case 1
+Inner if False → Test Case 2
+
+Therefore, these 3 test cases achieve 100% branch coverage
+
+
+3.For this pseudo-code that checks payment method and amount, write test cases to achieve condition coverage:
+
+function isPaymentAllowed(method, amount):
+if (method == "UPI" or method == "Card") and amount <= 10000:
+return true
+else:
+return false
+
+Answer :
+>>Test Case 1:
+Method = UPI, Amount = 5000
+UPI = True, Card = False, Amount ≤ 10000 = True
+Expected: true
+
+>>Test Case 2:
+Method = Card, Amount = 5000
+UPI = False, Card = True, Amount ≤ 10000 = True
+Expected: true
+
+>>Test Case 3:
+Method = Cash, Amount = 5000
+UPI = False, Card = False, Amount ≤ 10000 = True
+Expected: false
+
+>>Test Case 4:
+Method = UPI, Amount = 15000
+UPI = True, Amount ≤ 10000 = False
+Expected: false
+
+Thus, all conditions are tested as True and False, achieving 100% condition coverage.
+
+
+
+4.Given the pseudo-code below for a simple login check, write white-box test cases to cover all unique execution paths (path coverage):
+
+function login(username, password):
+if username == "admin":
+if password == "pass123":
+return "Login Success"
+else:
+return "Wrong Password"
+else:
+return "User Not Found"
+
+Answer :
+>>Test Case 1: Valid Login
+Username: admin
+Password: pass123
+Path: Username True → Password True
+Expected: Login Success
+
+>>Test Case 2: Wrong Password
+Username: admin
+Password: wrong123
+Path: Username True → Password False
+Expected: Wrong Password
+
+>>Test Case 3: Invalid Username
+Username: user
+Password: pass123
+Path: Username False
+Expected: User Not Found
+
+-Total unique paths covered: 3
+Therefore, these 3 test cases achieve 100% path coverage
