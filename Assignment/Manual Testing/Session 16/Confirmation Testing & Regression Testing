@@ -1,0 +1,95 @@
+1.Pick any one feature from a popular app you use (like Instagram's post upload, Zomato's order placement, or Flipkart's add to cart) and write 3 test cases you would re-test after a bug fix is made to that feature.
+Answer :
+Feature: Instagram – Post Upload
+After a bug fix in the Post Upload feature, I would re-test these 3 cases:
+
+1. Upload a photo
+Select a photo and click Share.
+Expected: Photo should be uploaded successfully and appear on the profile/feed.
+
+2. Upload multiple photos
+Select multiple photos and click Share.
+Expected: All selected photos should be uploaded successfully as a carousel post.
+
+3. Upload photo with caption
+Select a photo, add a caption, and click Share.
+Expected: Photo should be uploaded with the entered caption.
+
+These tests verify that the bug fix works correctly and the main Instagram post-upload functionality is not affected.
+
+
+
+
+2.Imagine you are testing the 'Apply Coupon' feature on Swiggy. After a bug related to coupon validation is fixed, design a re-testing checklist with at least 4 steps to confirm the fix works as expected.<br><br><em><strong>Hint:</strong> Think about both valid and invalid coupon scenarios.</em>
+Answer :
+
+1)Apply a valid coupon
+Enter a valid, non-expired coupon.
+Expected: Coupon is accepted and the correct discount is applied.
+2)Apply an expired coupon
+Enter an expired coupon.
+Expected: Coupon is rejected with a clear error message.
+3)Apply an invalid coupon
+Enter a random or incorrect coupon code.
+Expected: Coupon is rejected and no discount is applied.
+4)Check minimum order value
+Apply a coupon when the order value is below the required minimum.
+Expected: Coupon is rejected with the correct reason.
+5)Verify discount calculation
+Apply a valid coupon to an eligible order.
+Expected: The discount and final payable amount are calculated correctly.
+
+
+
+3.Create a regression test suite for the 'Search' module in a music streaming app (like Spotify). List at least 5 regression test cases that should be run after any update to the search functionality.
+Answer :
+
+1>Search for a song
+Enter a valid song name.
+Expected: Relevant songs should be displayed correctly.
+2>Search for an artist
+Enter an artist's name.
+Expected: The correct artist and related songs/albums should appear.
+3>Search for an album
+Enter a valid album name.
+Expected: The correct album and its songs should be displayed.
+4>Search with an invalid keyword
+Enter random or non-existing text.
+Expected: A clear “No results found” message should appear.
+5>Search with partial/spelling input
+Enter part of a song or artist name or use a minor spelling mistake.
+Expected: Relevant suggestions or results should be displayed.
+6>Clear search
+Enter a search term and then clear it.
+Expected: Search results should disappear and the search screen should return to its normal state.
+
+
+4.Explain why regression testing is especially important in agile development when teams release new features every sprint. Give two examples from any app you use where skipping regression testing could cause old features to break.
+Answer :
+Regression testing is especially important in Agile development because new features are added frequently, usually every sprint. A new change can accidentally affect an existing feature. Regression testing checks that the old features still work after the new changes.
+Example 1 – Instagram:
+If Instagram adds a new feature for uploading reels, it could accidentally affect the existing photo upload or commenting feature. Regression testing ensures these old features still work.
+
+Example 2 – Zomato:
+If Zomato updates its coupon system, it could affect the existing cart or payment functionality. Regression testing ensures users can still add items to the cart and complete orders successfully.
+
+Therefore, regression testing helps Agile teams release new features quickly without breaking existing functionality.
+
+
+
+
+5.Suppose your team just released a new version of a movie ticket booking app (like BookMyShow) with a major update to the payment module. Select 3 modules (other than payment) that could be affected and describe one regression test you would run for each.<br><br><em><strong>Hint:</strong> Think about modules like seat selection, booking history, or notifications that interact with payment.</em>
+Answer :
+After a major payment module update, I would test these 3 related modules:
+
+1. Seat Selection
+Regression Test: Select seats, proceed to payment, and complete the booking.
+Expected: Selected seats should remain reserved and should not become available to other users after successful payment.
+
+2. Booking History
+Regression Test: Complete a movie booking and open Booking History.
+Expected: The new booking should appear with the correct movie, seats, amount, and booking status.
+
+3. Notifications
+Regression Test: Complete a successful booking and check for the confirmation notification.
+Expected: The user should receive a booking confirmation with correct movie, seat, date, and payment details.
