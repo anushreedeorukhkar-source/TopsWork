@@ -1,0 +1,53 @@
+1.Create a decision table for a Flipkart-style coupon validation system where a coupon is only valid if: (1) the user is logged in, (2) the cart value is above ₹500, and (3) the coupon has not expired. Show all possible combinations and the resulting action (accept/reject).
+Answer :
+A Flipkart-style coupon is accepted only when all three conditions are satisfied:
+
+a)User is logged in.
+b)Cart value is above ₹500.
+c)Coupon has not expired.
+
+Since there are 3 conditions, there are 8 possible combinations.
+Decision Table in Normal Format:
+
+1)Logged in: Yes, Cart above ₹500: Yes, Coupon expired: No → Accept coupon
+2)Logged in: Yes, Cart above ₹500: Yes, Coupon expired: Yes → Reject coupon
+3)Logged in: Yes, Cart above ₹500: No, Coupon expired: No → Reject coupon
+4)Logged in: Yes, Cart above ₹500: No, Coupon expired: Yes → Reject coupon
+5)Logged in: No, Cart above ₹500: Yes, Coupon expired: No → Reject coupon
+6)Logged in: No, Cart above ₹500: Yes, Coupon expired: Yes → Reject coupon
+7)Logged in: No, Cart above ₹500: No, Coupon expired: No → Reject coupon
+8)Logged in: No, Cart above ₹500: No, Coupon expired: Yes → Reject coupon
+
+
+
+
+
+2.Draw a state transition diagram for a Paytm login feature that locks the account after 3 failed password attempts and only unlocks after a successful OTP verification.
+Answer :
+
+
+
+3.Given the following use case: 'A Zomato user can place an order, cancel it before it is prepared, or track the order once prepared,' create a use case diagram and list at least 3 possible test scenarios based on it.
+Answer :
+
+
+
+
+4.Modify your decision table from Task 1 to include an additional rule: the coupon cannot be used more than twice by the same user. Update the table and explain how this new rule changes the possible outcomes.<br><br><em><strong>Hint:</strong> Add a column for 'Coupon Usage Count' and adjust the actions accordingly.</em>
+Answer :
+
+The coupon will be accepted only if all four conditions are satisfied:
+User is logged in.
+a)Cart value is above ₹500.
+b)Coupon is not expired.
+c)Coupon usage count is less than 2.
+
+Possible Outcomes
+>Logged in + Cart > ₹500 + Coupon valid + Usage count 0 → Accept
+>Logged in + Cart > ₹500 + Coupon valid + Usage count 1 → Accept
+>Logged in + Cart > ₹500 + Coupon valid + Usage count 2 or more → Reject
+>If the user is not logged in → Reject
+>If cart value is ₹500 or less → Reject
+>If the coupon is expired → Reject
+
+Effect of the new rule: The coupon can now be used maximum twice by the same user. After the second use, further attempts are rejected.
