@@ -1,0 +1,53 @@
+1.Create a smoke test checklist for the login and dashboard features of a food delivery app like Zomato, listing at least 5 key test cases that would quickly verify if the main flows work after a new build.
+Answer :
+ >Login with valid credentials – User should log in successfully.
+ >Login with invalid credentials – Appropriate error message should be displayed.
+ >Dashboard/Home page loading – Home page should open without crashes or blank sections.
+ >Search restaurant – User should be able to search for a restaurant or food item and see results.
+ >Open restaurant – Selecting a restaurant should open its menu/details page correctly.
+ >Location selection – User should be able to select or confirm their delivery location.
+
+
+2.Write a sanity test scenario for the 'Add to Cart' feature in a Flipkart-style shopping app, focusing only on verifying a recent bug fix without retesting unrelated functionality.<br><br><em><strong>Hint:</strong> Your scenario should be limited to confirming the specific fix works as expected.</em>
+Answer :
+Scenario: Verify the recently fixed Add to Cart bug.
+Test Steps:
+1)Open the shopping app.
+2)Select the affected product.
+3)Click Add to Cart.
+4)Open the cart.
+
+Expected Result:
+The selected product should be successfully added to the cart with the correct product details and quantity.
+
+Scope:
+Only the recently fixed Add to Cart issue is verified. Unrelated features such as search, payment, wishlist, and checkout are not tested.
+
+
+
+3.Compare smoke testing and sanity testing by creating a table with at least 4 differences, using examples from popular apps like Instagram or Paytm to illustrate each point.
+Answer :
+>>Smoke Testing vs Sanity Testing
+
+1]Purpose
+Smoke Testing: Checks whether the main features of a new build are working.
+Sanity Testing: Checks whether a specific bug fix or change is working correctly.
+2]Scope
+Smoke Testing: Broad but shallow testing.
+Sanity Testing: Narrow and focused testing.
+3]When performed
+Smoke Testing: Usually performed when a new build is received.
+Sanity Testing: Usually performed after a minor change or bug fix.
+4]Example – Instagram
+Smoke Testing: Check login, feed, profile, and post upload to confirm the build is stable.
+Sanity Testing: If a post-upload bug is fixed, test only post upload to verify the fix.
+5]Example – Paytm
+Smoke Testing: Check login, recharge, wallet, and transaction features.
+Sanity Testing: If a recharge calculation bug is fixed, test only the recharge calculation.
+
+
+
+4.Given this situation: After a major update, the Spotify app crashes on startup for some users. Decide whether smoke testing or sanity testing is appropriate first, and explain your reasoning in 2-3 lines.
+Answer :
+Smoke testing is appropriate first.
+Since the app is crashing on startup after a major update, basic functionality cannot even be accessed. Smoke testing should be performed first to check whether the new build is stable enough for further testing.
