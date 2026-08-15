@@ -1,0 +1,72 @@
+1.Download a sample Terms & Conditions document from any popular app (like Zomato, Flipkart, or Instagram), and perform a static review to identify at least 5 unclear or ambiguous statements that could confuse users.
+Answer :
+1.] Acceptance by simply using the service
+>Statement: Zomato says that actually using the platform can be treated as acceptance of the Terms.
+>Why it is unclear: A user may not realize that simply browsing or using the app means they have legally accepted the Terms.
+>Suggested improvement: Clearly state which actions count as acceptance and when acceptance takes effect.
+2.] Changes to the Terms
+>Statement: Zomato can change or update the Terms at its “entirely at its own discretion.”
+>Why it is ambiguous: It does not clearly explain how users will be notified about important changes.
+>Suggested improvement: Specify how users will be informed and when major changes become effective.
+3.] “Objectionable” content
+>Statement: Users must not post content that is “otherwise objectionable.”
+>Why it is unclear: “Objectionable” is subjective and different users may interpret it differently.
+>Suggested improvement: Give clear examples or measurable criteria for content considered objectionable.
+4.] “Standards of good taste”
+>Statement: Users must not post material that violates the “standards of good taste or the standards of the Services.”
+>Why it is ambiguous: There is no clear definition of what “good taste” means.
+>Suggested improvement: Replace this phrase with specific content rules and examples.
+5.] Changes to content/features without notice
+>Statement: Zomato states that it may make changes and corrections to content at any time without prior notice.
+>Why it may confuse users: Users may not know which types of information or features can change without notification.
+>Suggested improvement: Specify whether this applies to prices, menus, availability, features, or other information.
+
+
+2.Create a comparison table listing 3 key differences between static testing and dynamic testing, using real-life examples from apps you use daily (such as a privacy policy review vs. actually filling a signup form).
+Answer :
+Static Testing vs Dynamic Testing
+1.)Meaning
+Static Testing: Testing is done without running the application.
+Dynamic Testing: Testing is done by running and using the application.
+2.)What is checked
+Static Testing: Requirements, documents, designs, and code are reviewed to find errors.
+Dynamic Testing: The actual functionality and behavior of the application are tested.
+3.)Real-life example
+Static Testing: Reviewing a privacy policy or signup requirements to find unclear or missing information.
+Dynamic Testing: Filling out a signup form with valid and invalid details to check whether registration works correctly.
+
+
+3.Imagine you are part of a code walkthrough for a new feature in a food delivery app (like Swiggy) — write 5 questions or points you would raise while reviewing the code for the 'Apply Coupon' function.
+Answer :
+
+During a code walkthrough for the “Apply Coupon” function in a Swiggy-like food delivery app, I would raise these 5 points:
+1)Coupon Validation: Does the code check whether the coupon is valid, expired, or already used?
+2)Minimum Order Value: Does it correctly verify conditions such as a minimum order amount before applying the coupon?
+3)Discount Calculation: Is the discount calculated correctly, including maximum discount limits and percentage/fixed discounts?
+4)Error Handling: What happens when the user enters an invalid coupon? Is a clear error message displayed without changing the order total?
+5)Security & Duplicate Use: Does the system prevent users from manipulating the coupon request or applying the same coupon multiple times?
+
+
+4.Conduct a mock inspection of a sample bug report from any open-source project (find one on GitHub or use a template online), and list 3 improvements you would suggest to make the report clearer and more useful for developers.Hint: Look for missing steps, unclear expected results, or vague descriptions.
+Answer :
+
+Mock Inspection of a Sample Bug Report:-
+For the mock inspection, I referred to an open-source GitHub issue format and compared it with recommended bug-report practices. A good bug report should clearly include reproduction steps, expected behavior, actual behavior, and environment details.
+
+-Sample Bug Description:
+“Login is not working. The app shows an error when I try to log in.”
+-Sample Bug Description:
+“Login is not working. The app shows an error when I try to log in.”
+
+3 Improvements
+1.)Add Clear Steps to Reproduce
+The report should specify exact steps, for example:
+“Open the app → Enter valid email and password → Click Login → Observe the error.”
+This helps developers reproduce the issue consistently.
+2.)Clearly Mention Expected and Actual Results
+Instead of only saying “login is not working,” the report should state:
+Expected: User should be logged in and taken to the home page.
+Actual: An “Invalid request” error is displayed.
+This makes the defect much easier to understand.
+3.)Include Environment Details
+Add information such as app version, device, operating system, and browser version. This helps developers determine whether the issue is specific to a particular environment.
