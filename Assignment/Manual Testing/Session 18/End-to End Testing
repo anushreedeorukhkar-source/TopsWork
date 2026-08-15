@@ -1,0 +1,85 @@
+1.Write an end-to-end test scenario for booking a movie ticket on BookMyShow, starting from searching for a movie to completing the payment and receiving a booking confirmation.
+Answer :
+Test Scenario: Verify that a user can successfully search for a movie, select a show, book seats, make payment, and receive a booking confirmation.
+1)Open BookMyShow and select a city.
+2)Search and select a movie.
+3)Choose theatre, date, and show time.
+4)Select available seats.
+5)Review booking details and click Proceed to Pay.
+6)Select a payment method and complete payment.
+7)Verify successful payment.
+8)Verify that the booking confirmation and ticket/booking ID are generated.
+
+
+2.Create a detailed system integration test scenario for placing a food order on Zomato, covering steps from selecting a restaurant and adding items to cart, to payment and order tracking.
+Answer :
+Scenario: Verify the complete food-ordering flow and integration between restaurant, cart, payment, and order-tracking modules.
+
+Steps:
+1)Open Zomato and log in.
+2)Set the delivery location.
+3)Search and select a restaurant.
+4)Select food items and add them to the cart.
+5)Verify item quantity, price, taxes, and delivery charges.
+6)Apply a valid coupon, if applicable.
+7)Select the delivery address.
+8)Choose a payment method and complete payment.
+9)Verify that the order is successfully placed.
+10)Verify that the restaurant receives the order.
+11)Track the order status from Preparing → Out for Delivery → Delivered.
+
+
+3.Write an end-to-end workflow test for a Flipkart-style shopping journey: user logs in, searches for a product, adds it to the cart, applies a discount coupon, selects an address, and completes the purchase.<br><br><em><strong>Hint:</strong> Include both positive and one negative scenario (e.g., invalid coupon or out-of-stock item).</em>
+Answer :
+Objective: Verify that a user can successfully complete a shopping journey from login to order placement.
+
+Positive Scenario:
+
+-Open the shopping application.
+-Log in using valid username/mobile number and password.
+-Search for a product, such as Wireless Headphones.
+-Select the product and verify its details and price.
+-Click “Add to Cart”.
+-Open the cart and verify the product and quantity.
+-Apply a valid discount coupon.
+-Verify that the coupon is applied and the discount is reflected in the total amount.
+-Select a valid delivery address.
+-Proceed to payment.
+-Select a valid payment method and complete the payment.
+-Verify that the order is successfully placed and an order ID is displayed.
+
+Expected Result: The user should be able to complete the purchase successfully and receive an order confirmation.
+
+Negative Scenario – Invalid Coupon:
+-Log in using valid credentials.
+-Search for an available product and add it to the cart.
+-Enter an invalid or expired coupon code.
+-Click “Apply”.
+-Verify that an error message such as “Invalid or expired coupon” is displayed.
+-Verify that no discount is applied and the original order amount remains unchanged
+
+
+4.List all the system integrations involved in a Paytm mobile recharge flow (user login, plan selection, payment, SMS confirmation), and write one test case for each integration point.
+Answer :
+
+1)Paytm Mobile Recharge – System Integrations and Test Cases
+User Login Integration – Paytm App ↔ Authentication Server
+Test Case: Login with valid mobile number and OTP.
+Steps: Open Paytm → Enter mobile number → Enter valid OTP.
+Expected Result: User is successfully authenticated and redirected to the home screen.
+2)Plan Selection Integration – Paytm App ↔ Mobile Operator
+Test Case: Fetch and select a valid recharge plan.
+Steps: Select Mobile Recharge → Enter mobile number → Select operator → View plans → Choose a plan.
+Expected Result: Correct recharge plans are displayed and the selected plan is added to the recharge request.
+3)Payment Integration – Paytm ↔ Payment Gateway/Bank
+Test Case: Complete recharge using a valid payment method.
+Steps: Select a recharge plan → Proceed to payment → Select UPI/card/wallet → Complete payment.
+Expected Result: Payment is processed successfully and the recharge request is sent to the operator.
+4)Recharge Integration – Paytm ↔ Telecom Operator
+Test Case: Verify successful recharge after payment.
+Steps: Complete payment for a valid recharge plan.
+Expected Result: Recharge is successfully processed by the mobile operator and the updated recharge status is shown in Paytm.
+5)SMS Confirmation Integration – Paytm/Operator ↔ SMS Gateway
+Test Case: Verify SMS confirmation after successful recharge.
+Steps: Complete a successful mobile recharge → Wait for confirmation SMS.
+Expected Result: User receives an SMS confirming the recharge amount and transaction details.
