@@ -1,0 +1,141 @@
+1.Prepare a one-page Test Summary Report for a recent feature update in a food delivery app like Zomato, including sections for test objectives, test coverage, major defects found, and overall test status.
+Answer :
+
+Project: Zomato-Style Food Delivery App
+Feature Update: Restaurant Search and Order Tracking
+Testing Type: Functional, Integration, UI, and Regression Testing
+Test Status: Completed
+
+1.] Test Objectives
+-Verify that users can search for restaurants and food items.
+-Verify that users can place orders successfully.
+-Verify that order status updates correctly.
+-Ensure existing features continue to work after the update.
+
+2.] Test Coverage
+-Restaurant search and filters
+-Restaurant and menu display
+-Add to Cart and quantity updates
+-Order placement
+-Payment functionality
+-Order tracking
+-Error messages and basic UI validation
+
+Test Cases: 50
+Passed: 46
+Failed: 4
+Blocked: 0
+
+3.] Major Defects Found
+-High: Order status was not updating after payment.
+-Medium: Search results sometimes displayed incorrect restaurants.
+-Medium: Payment failure message was unclear.
+-Low: Minor UI alignment issue on the order tracking screen.
+
+The high-severity defect was fixed and successfully retested.
+
+4.] Overall Test Status
+PASS – With Minor Known Issues
+
+
+
+
+
+2.Create a sample Daily QA Report for a 5-day sprint in a movie ticket booking app (BookMyShow style), listing the number of test cases executed, passed, failed, and blocked for each day.
+Answer :
+
+Project: Movie Ticket Booking App
+Sprint: Sprint 1
+Duration: 5 Days
+
+>Day 1:
+Test Cases Executed: 20
+Passed: 17
+Failed: 2
+Blocked: 1
+Status: Testing started for movie search and movie details.
+
+>Day 2:
+Test Cases Executed: 25
+Passed: 21
+Failed: 3
+Blocked: 1
+Status: Seat selection and show timing features tested.
+
+>Day 3:
+Test Cases Executed: 30
+Passed: 26
+Failed: 3
+Blocked: 1
+Status: Booking and payment testing completed.
+
+>Day 4:
+Test Cases Executed: 28
+Passed: 25
+Failed: 2
+Blocked: 1
+Status: Regression testing performed and major defects retested.
+
+>Day 5:
+Test Cases Executed: 22
+Passed: 21
+Failed: 1
+Blocked: 0
+Status: Final regression testing completed.
+Overall Sprint Status
+
+Total Executed: 125
+Passed: 110
+Failed: 11
+Blocked: 3
+
+
+3.List and define five common QA metrics (such as Defect Density, Test Case Execution Rate, Defect Leakage, Test Coverage, and Defect Reopen Rate) and explain how each would be useful for a team testing a digital payments app like Paytm.
+Answer :
+
+Five Common QA Metrics for a Digital Payments App
+1. Defect Density
+Definition: The number of defects found per unit of software, such as per module or per 1,000 lines of code.
+Use in Paytm-like app: It helps identify which modules, such as UPI payments or money transfer, have more defects and need extra testing.
+
+2. Test Case Execution Rate
+Definition: The percentage of planned test cases that have been executed.
+Use: It shows how much testing has been completed. For example, if 90 out of 100 payment test cases are executed, the execution rate is 90%.
+
+3. Defect Leakage
+Definition: The number of defects that were missed during testing but were found after release.
+Use: It helps measure the effectiveness of QA. A high leakage rate in UPI or wallet transactions indicates that testing needs improvement.
+
+4. Test Coverage
+Definition: The percentage of requirements or features covered by test cases.
+Use: It ensures important payment functions such as UPI, QR payments, refunds, transaction history, and OTP verification are properly tested.
+
+5. Defect Reopen Rate
+Definition: The percentage of fixed defects that are reopened because the issue still exists or the fix caused another problem.
+Use: It helps evaluate the quality of bug fixes. A high reopen rate may indicate that developers need better root-cause analysis and QA verification.
+
+
+
+
+
+
+4.Given this scenario: In a weekly sprint for a music streaming app (Spotify-style), 120 test cases were planned, 110 executed, 95 passed, 15 failed, and 5 defects were reopened. Calculate the Test Case Execution Rate and Defect Reopen Rate, and interpret what these numbers might indicate.<br><br><em><strong>Hint:</strong> Test Case Execution Rate = (Executed / Planned) x 100; Defect Reopen Rate = (Reopened / Total Defects Found) x 100.</em>
+Answer :
+
+1.] Test Case Execution Rate
+Formula:
+Test Case Execution Rate = (Executed / Planned) × 100
+                         = (110 / 120) × 100
+                         = 91.67%
+
+>Interpretation: About 91.67% of the planned test cases were executed, which indicates good testing progress. However, 10 test cases were still pending.
+
+2.] Defect Reopen Rate
+Assuming the 15 failed test cases represent the total defects found:
+
+Formula:
+Defect Reopen Rate = (Reopened / Total Defects Found) × 10
+                   = (5 / 15) × 100
+                   = 33.33%
+
+>Interpretation: A 33.33% reopen rate is relatively high and may indicate that some fixes were incomplete or did not fully resolve the original issues. These defects should be reviewed carefully before the release.
