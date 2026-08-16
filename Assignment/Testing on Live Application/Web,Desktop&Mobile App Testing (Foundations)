@@ -1,0 +1,115 @@
+1.Open the Flipkart website in your browser and test the main navigation bar — click each menu item (like Electronics, Fashion, Home, etc.) and verify that the URL changes correctly and the expected content loads.
+Answer :
+
+Navigation Bar Testing – Flipkart
+
+Test Objective:
+Verify that each navigation menu item redirects to the correct category page and that relevant products/content are displayed.
+
+Test Steps:
+
+Open Flipkart.
+Click each menu item one by one.
+Check whether the URL changes.
+Verify that the displayed products/content match the selected category.
+Return to the homepage and repeat for the next menu item.
+
+>>Sample Test Results
+-For You: Navigation available; expected personalized/recommended content.
+-Fashion: Should open Fashion products such as clothing and footwear.
+-Mobiles: Should display mobile phones and related products.
+-Electronics: Should display electronic products such as laptops, cameras, and accessories.
+-Beauty: Should display beauty and personal-care products.
+-Home: Should display home and furniture-related products.
+-Appliances: Should display appliances such as TVs, refrigerators, ACs, and washing machines.
+-Toys & Baby: Should display toys and baby-care products.
+-Food & Health: Should display food, grocery, and health-related products.
+-Auto Accessories: Should display car/bike accessories.
+-Sports & Fitness: Should display sports and fitness products.
+-Furniture: Should display beds, tables, sofas, etc.
+-Books & Media: Should display books and media products.
+-2 Wheelers: Should display two-wheeler-related offerings.
+
+
+
+2.Pick any sign-up or login form from a popular web app you use (like Zomato, Instagram, or Paytm) and test its field validation by entering invalid email addresses, leaving required fields blank, and submitting — note the error messages shown for each case.
+Answer :
+Login Form Validation – Instagram
+
+1.) Invalid Email
+Test Data: abc@
+Expected: Error message should appear and login should fail.
+
+2.) Empty Username/Email
+Test Data: Blank
+Expected: Required-field error should be displayed.
+
+3.) Empty Password
+Test Data: Valid username + blank password
+Expected: Password required error should appear.
+
+4.) Both Fields Blank
+Test Data: Username and password blank
+Expected: Login should not proceed and required-field errors should be shown.
+
+Conclusion: The login form should reject invalid or empty inputs and allow login only with valid details.
+
+
+3.Install the Notepad++ desktop application on your Windows machine, then test if the installer correctly creates a Start Menu shortcut and check if you can save a text file to your Documents folder.
+Answer :
+
+Notepad++ Installation and Basic Testing.
+1. Install Notepad++
+Download and run the Notepad++ installer.
+Complete the installation.
+
+2. Test Start Menu Shortcut
+Open the Windows Start Menu.
+Search for Notepad++.
+Expected Result: Notepad++ should appear and open successfully.
+
+3. Test File Saving
+Open Notepad++ and type some text, e.g., Testing Notepad++.
+Click File → Save As.
+Select the Documents folder and save as test.txt.
+Expected Result: The file should be saved successfully in the Documents folder
+
+
+
+4.Download and install the 'Spotify Lite' APK on an Android emulator (like BlueStacks or Android Studio emulator), then verify that the app launches, the login screen appears, and the UI elements (logo, fields, buttons) are properly displayed on your mobile screen.<br><br><em><strong>Hint:</strong> If you don't have a real device, use any free Android emulator and a safe APK download source.</em>
+Answer :
+
+>>Steps:
+
+1>Download the Spotify Lite APK from a trusted APK source.
+2>Install the APK on the Android emulator.
+3>Launch Spotify Lite.
+4>Check whether the Spotify logo and login screen are displayed.
+5>Verify the username/email field, password field, and Log In button.
+6>Check that all UI elements are properly aligned and visible.
+
+Expected Results:
+App installs without errors.
+App launches successfully.
+Login screen appears.
+Logo, input fields, and buttons are clearly visible.
+UI should fit properly on the emulator screen without overlapping.
+
+
+
+5.Test the window handling of the Windows Calculator app by opening multiple instances (if possible), switching between them, and checking if calculations in one window affect the others.
+Answer :
+
+>>Steps:
+Open the Windows Calculator app.
+Open another Calculator window/instance if supported.
+Perform a calculation such as 10 + 20 = 30 in the first window.
+Switch to the second window.
+Perform a different calculation, such as 50 × 2 = 100.
+Switch between both windows.
+
+>>Expected Results:
+Each Calculator window should maintain its own calculation.
+Calculations in one window should not affect the other.
+Switching between windows should work smoothly.
+Both windows should remain responsive.
