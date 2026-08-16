@@ -1,0 +1,82 @@
+1.Create a table comparing Agile and Waterfall models across 5 factors relevant to software testing, such as requirements, feedback cycle, tester involvement, documentation, and flexibility.
+Answer :
+1>Requirements
+Agile: Requirements can change during development based on customer needs.
+Waterfall: Requirements are mostly fixed at the beginning of the project.
+2>Feedback Cycle
+Agile: Feedback is received continuously after each sprint.
+Waterfall: Feedback is generally received after a major phase or at the end of development.
+3>Tester Involvement
+Agile: Testers are involved from the beginning and test features during every sprint.
+Waterfall: Testers usually become involved after the development phase is completed.
+4>Documentation
+Agile: Focuses on necessary documentation while giving more importance to working software.
+Waterfall: Requires detailed documentation at every development phase.
+5>Flexibility
+Agile: Highly flexible; changes can be added to upcoming sprints.
+Waterfall: Less flexible; changes after development has started can be difficult and costly.
+
+
+2.Pick any app you use daily (like Instagram, Zomato, or Paytm) and describe how the testing process would look different if the team used Agile instead of Waterfall. Mention at least 3 specific testing activities or practices that would change.
+Answer :
+Testing Instagram Using Agile Instead of Waterfall
+
+If Instagram used Agile, testing would happen continuously during every sprint instead of waiting until the entire application is developed.
+
+>>Three major changes would be:
+1)Continuous Testing: Testers would test features such as login, stories, and messaging during the same sprint in which they are developed.
+2)Early Test Case Design: Testers would create test cases as soon as user stories are discussed, rather than waiting for the complete application.
+3)Continuous Regression Testing: Automated regression tests would be run frequently to make sure new features do not break existing features.
+
+
+
+3.Draw a simple workflow diagram showing the main roles (such as Scrum Master, Product Owner, Development Team, Tester) and ceremonies (like Sprint Planning, Daily Standup, Sprint Review) in a SCRUM process.
+Answer :
+
+
+
+
+
+4.For a food delivery app (like Swiggy), map out which testing activities should happen during each phase of a typical Agile sprint (e.g., backlog grooming, sprint planning, development, review).<br><br><em><strong>Hint:</strong> Include activities like writing user stories, test case design, test execution, and bug reporting.</em>
+Answer :
+1. Backlog Grooming / Refinement
+-Write and clarify user stories.
+-Define acceptance criteria.
+-Tester identifies possible test scenarios.
+-Identify testing risks and dependencies.
+
+Example: User story – “As a customer, I want to apply a coupon to my food order.”
+
+2. Sprint Planning
+-Select user stories for the sprint.
+-Review requirements with developers and Product Owner.
+-Design test scenarios and test cases.
+-Prepare required test data.
+
+3. Development
+-Developers build the selected features.
+-Tester prepares detailed test cases.
+-Perform unit and integration testing where applicable.
+-Start testing completed features.
+
+Example: Test whether a valid coupon gives the correct discount.
+
+4. Test Execution
+-Execute positive and negative test cases.
+-Check functional and boundary conditions.
+-Report bugs with steps to reproduce, expected result, and actual result.
+-Retest fixed defects.
+-Perform regression testing.
+
+Example: Verify that an expired coupon is rejected with the correct error message.
+
+5. Sprint Review
+-Demonstrate the completed feature to stakeholders.
+-Share testing results and important defects.
+-Collect feedback from the Product Owner.
+-Add new requirements or changes to the backlog.
+
+6. Sprint Retrospective
+-Discuss what went well and what went wrong.
+-Identify testing problems or delays.
+-Decide improvements for the next sprint.
