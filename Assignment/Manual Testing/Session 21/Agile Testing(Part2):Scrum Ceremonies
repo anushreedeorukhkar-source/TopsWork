@@ -1,0 +1,143 @@
+1.Create a sample Sprint Board in JIRA using the Scrum template and add at least 5 tasks for a 'Food Delivery App' sprint (e.g., menu display, order placement, payment integration, delivery tracking, user reviews).
+
+Answer :Project: Food Delivery App
+Template: Scrum
+Sprint Name: Food Delivery Sprint 1
+Sprint Duration: 2 weeks
+
+The JIRA Sprint Board can have the following columns:
+
+To Do → In Progress → Code Review → Testing → Done
+
+Tasks to Add
+1.] Menu Display
+Task: Design and develop the restaurant menu page.
+Description: Display food items with name, price, image, and description.
+Status: To Do
+Priority: High
+
+2.] Order Placement
+Task: Implement the food order placement functionality.
+Description: Allow users to add items to the cart, select quantity, and place an order.
+Status: To Do
+Priority: High
+
+3.] Payment Integration
+Task: Integrate online payment functionality.
+Description: Support payment through UPI, cards, and other available payment methods.
+Status: To Do
+Priority: High
+
+4.] Delivery Tracking
+Task: Develop real-time order and delivery tracking.
+Description: Allow users to see the current status and location of their delivery.
+Status: To Do
+Priority: Medium
+
+5.] User Reviews
+Task: Add food and restaurant review functionality.
+Description: Allow users to give ratings and write reviews after receiving an order.
+Status: To Do
+Priority: Medium
+Example Sprint Flow
+
+At the beginning of the sprint, all five tasks are placed in To Do. Developers move tasks to In Progress when development starts. After development, tasks move to Code Review, then Testing. Once the feature passes testing and meets the acceptance criteria, it is moved to Done.
+
+
+2.Write a script for a Daily Standup meeting for a team building a new feature in a music streaming app like Spotify, covering what you did yesterday, what you plan to do today, and any blockers.
+Answer :
+Scrum Master: Good morning, everyone. Let’s start our daily standup. Please share what you did yesterday, what you’ll do today, and if you have any blockers.
+
+Developer: Yesterday, I worked on the Create Playlist feature and completed the playlist creation API. Today, I’ll work on connecting the API with the mobile app. I don’t have any blockers.
+
+Tester: Yesterday, I prepared test cases for the Add Song to Playlist feature and tested the basic functionality. Today, I’ll continue testing different scenarios, including duplicate songs and empty playlists. My blocker is that the latest build is not yet available for testing.
+
+UI/UX Designer: Yesterday, I completed the playlist screen design. Today, I’ll make some final changes based on the developer’s feedback. I have no blockers.
+
+Backend Developer: Yesterday, I worked on the database changes required for storing playlists and songs. Today, I’ll complete the remaining API changes and support the frontend integration. No blockers at the moment.
+
+Scrum Master: Great. The main blocker is the latest build not being available for testing. I’ll coordinate with the development team to get the build ready. Let’s continue working on the playlist feature and meet again tomorrow.
+
+
+
+
+3.Simulate a Sprint Planning meeting by listing 3 user stories for a Flipkart-style shopping cart feature and breaking each story into smaller tasks with clear acceptance criteria.<br><br><em><strong>Hint:</strong> Think about tasks like 'Add to Cart', 'Update Quantity', and 'Remove Item'.</em>
+Answer :
+Sprint Goal: Improve the shopping cart functionality of a Flipkart-style app.
+
+1. Add to Cart
+User Story: As a customer, I want to add products to my cart.
+
+Tasks:
+-Add “Add to Cart” button.
+-Store product in cart.
+-Display product name, price, and quantity.
+
+Acceptance Criteria:
+-Product is added successfully.
+-Correct product details are displayed.
+-Out-of-stock products cannot be added.
+
+2. Update Quantity
+User Story: As a customer, I want to change product quantity.
+
+Tasks:
+-Add + and − buttons.
+-Update quantity and total price.
+
+Acceptance Criteria:
+-Quantity updates correctly.
+-Total price changes automatically.
+-Quantity cannot go below 1.
+
+3. Remove Item
+User Story: As a customer, I want to remove unwanted items from my cart.
+
+Tasks:
+-Add “Remove” button.
+-Remove product from cart.
+-Update cart total.
+
+Acceptance Criteria:
+-Item is removed successfully.
+-Cart total is updated.
+-Empty cart message is displayed when no items remain.
+
+
+
+4.After completing a mock sprint for a movie ticket booking app (like BookMyShow), write a brief Sprint Review summary describing what features were delivered, what went well, and what feedback you received from stakeholders.
+Answer :
+
+Features Delivered:
+-Movie search and filtering.
+-Movie details and show timings.
+-Seat selection.
+-Online ticket booking and payment.
+-Booking confirmation.
+
+What Went Well:
+-Features were completed within the sprint.
+-Testing was completed successfully with only minor bugs.
+-Team collaboration and communication were good.
+
+Stakeholder Feedback:
+-Stakeholders liked the simple booking flow.
+-They suggested adding movie recommendations and better seat availability information in the next sprint.
+-They also requested improved payment error messages.
+
+
+
+5.Conduct a Sprint Retrospective for a Zomato-style restaurant search sprint by listing 2 things that went well, 2 things that could be improved, and 1 action item for the next sprint.
+Answer :
+
+>>What Went Well:
+1)Restaurant search and filtering features were completed on time.
+2)Testing was completed successfully with good teamwork.
+
+>>What Could Be Improved:
+1)Some test cases were prepared late.
+2)Communication between developers and testers could be better.
+
+>>Action Item for Next Sprint:
+1)Prepare test cases earlier and conduct a quick developer–tester discussion before development starts.
+
