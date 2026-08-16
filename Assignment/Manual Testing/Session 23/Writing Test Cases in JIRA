@@ -1,0 +1,102 @@
+1.Log in to your JIRA test project and create a new test case for the 'Add to Cart' feature found in shopping apps like Flipkart or Myntra, including a clear summary and description.
+Answer :
+
+Summary: Test Add to Cart Feature
+
+>>Description:
+Verify that users can successfully add products to the shopping cart, view the added product, and confirm that the product name, price, and quantity are displayed correctly. Also verify that unavailable products cannot be added to the cart.
+
+Expected Result:
+The selected product should be added to the cart successfully with the correct product details.
+
+2.Link your newly created 'Add to Cart' test case to an existing user story or epic in JIRA that represents the shopping cart module.<br><br><em><strong>Hint:</strong> Use the 'Link Issue' or 'Associate to Story' option in the test case details.</em>
+Answer :
+
+Steps to Link the “Add to Cart” Test Case in JIRA
+1)Open your “Test Add to Cart Feature” issue in JIRA.
+2)Click More (⋯) or Link issue.
+3)Select Link Issue.
+4)Choose the appropriate relationship, such as “relates to” or “is tested by.”
+5)Search for your existing Shopping Cart user story or epic.
+6)Select the issue and click Link.
+7)Verify that the linked story/epic appears in the Issue Links section.
+
+Example:
+Epic: Shopping Cart Module
+↳ Test Case: Test Add to Cart Feature
+
+
+3.Add at least two relevant attachments (such as a screenshot of the cart UI and a sample test data file) to your 'Add to Cart' test case in JIRA.
+Answer :
+
+To complete this in JIRA:
+-Open your “Test Add to Cart Feature” test case.
+-Click Add attachment or the paperclip 📎 icon.
+-Upload a cart UI screenshot, for example:
+-Add_to_Cart_UI.png
+-Upload a sample test data file, for example:
+-Add_to_Cart_Test_Data.xlsx
+-Click Upload and verify that both files appear in the Attachments section.
+
+Expected Attachments
+Screenshot: Cart UI showing a product added to the cart.
+Test Data: Sample product information such as product name, price, quantity, and availability.
+
+
+
+4.Write three acceptance criteria for the 'Add to Cart' test case in JIRA, making sure they are clear, measurable, and relevant to typical e-commerce app behavior.
+Answer :
+
+>>Acceptance Criteria – Add to Cart
+1)Product Added Successfully: When a user clicks “Add to Cart” on an available product, the product must appear in the cart with the correct name, price, and quantity.
+2)Cart Quantity Updated: When the same product is added again, the cart quantity must increase correctly and the total price must be updated.
+3)Out-of-Stock Product: If a product is unavailable or out of stock, the “Add to Cart” option must be disabled or an appropriate error message must be displayed.
+
+
+
+5.Choose a signup or login test case you entered in JIRA and revise it to add more technical depth: include detailed preconditions, test data, and expected results for both valid and invalid input scenarios.<br><br><em><strong>Hint:</strong> Think about edge cases like blank fields, special characters, or already registered emails.</em>
+Answer :
+
+>>Preconditions:
+
+-User is on the Signup/Login page.
+-Application and database are available.
+-For signup, the email should not already exist.
+-For login, a registered account must be available.
+
+>>Test Data:
+Valid email: user123@gmail.com
+Valid password: Test@123
+Blank email/password
+Invalid email: user@
+Special characters: @@@###
+Already registered email: existing@gmail.com
+Incorrect password: Wrong@123
+
+Valid Input Scenario
+Steps: Enter a valid registered email and correct password, then click Login.
+Expected Result: User should be successfully logged in and redirected to the home/dashboard page.
+
+Invalid Input Scenarios
+
+1. Blank Fields
+Leave email and password blank and click Login.
+Expected Result: Required-field validation messages should be displayed.
+
+2. Invalid Email Format
+Enter user@ as the email.
+Expected Result: System should display an “Invalid email format” message.
+
+3. Special Characters
+Enter @@@### in the email field.
+Expected Result: System should reject the input and display a validation message.
+
+4. Incorrect Password
+Enter a valid email with an incorrect password.
+Expected Result: Login should fail and an appropriate error message should be displayed.
+
+5. Already Registered Email (Signup)
+Enter existing@gmail.com while creating a new account.
+Expected Result: System should display “Email already registered” and should not create a duplicate account.
+
+
