@@ -1,0 +1,72 @@
+1.Create a simple release readiness checklist for a new version of a food delivery app (like Zomato or Swiggy) that includes at least 8 key items QA should verify before the release goes live.
+Answer :
+>>Release Readiness Checklist – Food Delivery App
+ 1)All planned test cases are executed.
+ 2)Critical and high-severity defects are fixed and closed.
+ 3)Regression testing is completed successfully.
+ 4)Login, restaurant search, and menu features work correctly.
+ 5)Cart and order placement work without errors.
+ 6)Payment methods such as UPI, cards, and wallets are tested.
+ 7)Order tracking and delivery status updates work correctly.
+ 8)App works properly on supported Android and iOS devices.
+ 9)No critical crashes or performance issues are found.
+ 10)Final build is approved by QA and stakeholders.
+
+
+
+
+
+
+2.Describe the difference between a build cycle and a release cycle using an example from any popular app you use (such as Instagram or Paytm), and explain how QA is involved at each stage.
+Answer :
+Difference Between Build Cycle and Release Cycle
+
+>>Build Cycle:
+A build cycle is the process of developing and testing a new version of an app. Developers create a build, and QA tests it to find bugs.
+
+Example – Paytm:
+Developers add a new UPI payment feature and create a new build. QA tests the feature, reports defects, and performs regression testing on the build.
+
+>>Release Cycle:
+A release cycle is the process of taking the tested and approved build and making it available to users.
+
+Example – Paytm:
+After QA confirms that the UPI feature works correctly and major defects are fixed, the build is approved and released to users through the app store.
+
+QA Involvement
+Build Cycle: QA receives each build, performs smoke testing, executes test cases, reports bugs, and retests fixes.
+Release Cycle: QA performs final regression testing, verifies release readiness, checks critical defects, and gives a Go/No-Go recommendation.
+
+
+
+
+
+
+3.Imagine your team is preparing to release a new movie booking feature in a BookMyShow-style app. List 5 specific tasks a QA should perform during the release process to ensure the feature is ready for users.<br><br><em><strong>Hint:</strong> Think about both functional and non-functional aspects.</em>
+Answer :
+QA Tasks During Release – Movie Booking Feature
+1)Functional Testing: Verify movie search, show timings, seat selection, booking, and ticket confirmation work correctly.
+2)Payment Testing: Test UPI, cards, and other payment methods, including failed and cancelled payments.
+3)Regression Testing: Ensure existing features such as login, movie search, and booking history still work after the new feature is added.
+4)Performance & Compatibility Testing: Check booking performance under high traffic and verify the feature works on supported devices, browsers, and operating systems.
+5)Final Defect Verification: Retest all fixed critical/high-priority bugs and confirm there are no release-blocking defects before giving QA approval.
+
+
+
+
+
+4.Given this scenario: During the release cycle of a Flipkart-like shopping app, a critical bug is found in the payment gateway just before release. Write the steps a QA should follow to report the issue and help the team decide whether to proceed with the release or not.
+Answer :
+
+Steps :
+1>Reproduce the Bug: Verify the payment issue multiple times and confirm that it is consistently occurring.
+2>Log the Defect: Create a Jira bug with details such as steps to reproduce, expected result, actual result, screenshots/logs, Severity: Critical, and Priority: High.
+3>Inform the Team: Immediately notify the developer, QA lead, Product Owner, and Release Manager because payment is a critical feature.
+4>Assess the Impact: Check whether the bug affects all payment methods or only specific methods, devices, users, or transactions.
+5>Fix and Retest: If the team decides to fix it, test the fix and perform regression testing around checkout and payment.
+6>Make the Release Decision:
+If payments are still failing or users could lose money, do not release the build.
+If the issue is fixed and critical payment scenarios pass, QA can recommend proceeding.
+7>Final QA Sign-off: Document the test results and give a Go/No-Go recommendation to the release team.
+
+Example: If users cannot complete UPI or card payments, the release should normally be blocked until the critical defect is fixed and successfully retested.
