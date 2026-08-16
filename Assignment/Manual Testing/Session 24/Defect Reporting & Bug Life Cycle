@@ -1,0 +1,112 @@
+1.Sign up for a free Jira account, create a new project named 'Food Delivery App QA', and add a sample bug titled 'Order status not updating after payment'.
+Answer :
+1)Open Jira Free and create a free Atlassian/Jira account.
+2)Create a new Jira project named Food Delivery App QA.
+3)Choose the Scrum template if Jira asks for a project template.
+4)Open the project and select Create.
+5)Set Issue Type to Bug.
+6)Enter the Summary/Title:
+7)Order status not updating after payment
+8)Add a short description, for example:
+9)After successful payment, the order status remains unchanged instead of updating to “Order Confirmed.”
+10)Click Create.
+11)Verify that the bug appears in your project backlog or Scrum board.
+
+
+
+2.Fill out a defect report in Jira for a bug you found in any app you use daily (like Zomato, Flipkart, or Paytm), using all main fields: Summary, Description, Steps to Reproduce, Expected Result, Actual Result, Severity, and Priority.<br><br><em><strong>Hint:</strong> Use a real or imagined bug, but make the details specific and realistic.</em>
+Answer :
+
+Description:
+The order status does not update correctly after the restaurant hands the order to the delivery partner. The customer continues to see “Preparing” instead of “Out for Delivery.”
+
+>>Steps to Reproduce:
+-Open the food delivery app.
+-Select a restaurant and add an item to the cart.
+-Complete the order and payment.
+-Open My Orders and select the active order.
+-Wait until the restaurant dispatches the order.
+-Refresh the order tracking page.
+
+Expected Result:
+The order status should update from “Preparing” to “Out for Delivery” when the delivery partner picks up the order.
+
+Actual Result:
+The status remains “Preparing” even after the order has been picked up.
+
+Severity: Major – It affects order tracking and may confuse customers.
+
+Priority: High – The issue should be fixed quickly because order tracking is an important feature.
+
+
+
+
+3.Given these three bugs found in a movie ticket booking app: (1) Payment fails for UPI, (2) Movie poster image is blurry, (3) App crashes if you book more than 10 tickets at once — classify each bug as High/Medium/Low Severity and High/Medium/Low Priority, and justify your choices.
+Answer :
+
+>Bug 1: Payment fails for UPI
+Severity: High
+Priority: High
+
+Reason: Users cannot complete payment through UPI, which directly prevents ticket booking and affects an important business function. It should be fixed immediately.
+
+>Bug 2: Movie poster image is blurry
+Severity: Low
+Priority: Low
+
+Reason: The issue affects only the visual quality of the app and does not prevent users from searching or booking tickets.
+
+>Bug 3: App crashes when booking more than 10 tickets
+Severity: High
+Priority: High
+
+Reason: The app crashes completely, which is a serious functional problem. It affects users trying to book multiple tickets and can result in a failed booking.
+
+
+
+4.Draw the complete bug life cycle for a typical defect in Jira, labeling each stage (for example: New, Assigned, In Progress, Fixed, Retest, Closed, Reopened) and describing what happens at each step.<br><br><em><strong>Hint:</strong> You can use a simple flowchart tool or draw and scan a diagram, but your answer must include both the diagram and brief descriptions.</em>
+Answer :
+
+Flow:
+New → Assigned → In Progress → Fixed → Retest → Closed
+If the bug is not fixed during retesting: Retest → Reopened → In Progress
+
+Brief descriptions:
+1)New: Tester identifies and reports the defect in Jira.
+2)Assigned: The defect is reviewed and assigned to a developer.
+3)In Progress: Developer investigates the issue and works on the fix.
+4)Fixed: Developer fixes the defect and marks it as fixed.
+5)Retest: Tester checks whether the defect has been successfully fixed.
+6)Closed: If the fix works correctly, the tester closes the defect.
+7)Reopened: If the defect still exists, it is reopened and sent back to development.
+
+>>Example: If a payment bug is reported, it moves through these stages until the payment works correctly and the defect is finally Closed.
+
+
+5.Download a sample defect template from the internet (or use a template provided in class), and fill it out for a bug you noticed in any social media app (like Instagram or WhatsApp), making sure to include Severity and Priority fields.
+Answer :
+
+Defect Report – Instagram
+
+Defect ID: BUG-001
+Application: Instagram
+Summary: Instagram Story video becomes blurry after uploading.
+
+Description:
+When a user uploads a clear HD video to Instagram Story, the uploaded video sometimes appears noticeably blurry.
+
+Steps to Reproduce:
+1)Open Instagram and log in.
+2)Select a clear HD video from the gallery.
+3)Upload it as an Instagram Story.
+4)Post the Story.
+5)View the posted Story.
+
+Expected Result:
+The uploaded video should maintain good image and video quality.
+
+Actual Result:
+The video appears compressed and blurry after posting.
+
+Severity: Medium
+Priority: Medium
