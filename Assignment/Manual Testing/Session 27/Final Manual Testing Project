@@ -1,0 +1,185 @@
+1.Pick any one app you use daily (like Zomato, Instagram, or Paytm) and write a short summary of its main features and what you think the business requirements are for that app.
+Answer :
+
+Example: Zomato
+
+>>Main Features:
+-Search and discover nearby restaurants.
+-View menus, prices, ratings, and reviews.
+-Add food items to the cart and place orders.
+-Make online payments.
+-Track food delivery in real time.
+-Cancel orders and provide ratings/reviews.
+
+>>Business Requirements:
+-The app should allow users to easily find restaurants and food items.
+-Users should be able to place orders quickly and securely.
+-The system should support multiple payment methods.
+-Restaurants should be able to manage menus and orders.
+-The app should provide accurate order and delivery tracking.
+-Customer information and payment details should be kept secure.
+-The business should generate revenue through delivery charges, commissions, and promotions.
+
+
+
+
+2.For the app you chose, create a test plan document that lists the testing objectives, scope, resources needed, and a rough timeline for manual testing.<br><br><em><strong>Hint:</strong> Focus on 2-3 key features such as login, search, or payment.</em>
+Answer :
+
+>>Test Plan – Zomato App
+
+1. Testing Objectives:
+The main objective is to check whether the Login, Search, and Payment features work correctly, are easy to use, and are free from major defects.
+
+2. Scope:
+Login: Test valid/invalid login, logout, and forgot password.
+Search: Test restaurant/food search, filters, and invalid searches.
+Payment: Test successful, failed, and cancelled payments.
+
+3. Resources Needed:
+One manual tester, mobile/browser devices, test accounts, test data, payment test environment, and a bug tracking tool like JIRA.
+
+4. Testing Activities:
+Prepare test cases, execute functional testing, perform positive and negative testing, report defects, retest fixes, and perform regression testing.
+
+5. Rough Timeline:
+Testing can be completed in about 5–7 days: 1 day for planning, 1–2 days for Login and Search, 2 days for Payment, and 1–2 days for retesting and regression.
+
+6. Exit Criteria:
+Testing can stop when all important test cases are completed, critical defects are fixed, and the main features work as expected.
+
+
+
+
+3.Write 5 test scenarios and 8 detailed test cases (with steps, expected results, and test data) for a core feature of your selected app, such as placing a food order, sending a message, or making a payment.
+Answer :
+
+5 Test Scenarios
+Verify that a user can select a restaurant and add food items to the cart.
+Verify that a user can place an order using a valid delivery address.
+Verify that the user can apply a valid coupon during checkout.
+Verify that the user can make a successful payment.
+Verify that the user receives the correct order confirmation and tracking details.
+
+>>8 Detailed Test Cases
+
+TC01 – Add food item to cart
+-Steps: Login → Select a restaurant → Select a food item → Click Add to Cart.
+-Test Data: Pizza – ₹250
+-Expected Result: The food item is added to the cart with the correct price.
+
+TC02 – Add multiple items
+-Steps: Select a restaurant → Add two different food items → Open cart.
+-Test Data: Pizza ₹250 + Burger ₹150
+-Expected Result: Both items appear in the cart and the total is ₹400.
+
+TC03 – Remove item from cart
+-Steps: Add an item → Open cart → Click Remove.
+-Test Data: Burger – ₹150
+-Expected Result: The item is removed and the cart total is updated.
+
+TC04 – Place order with valid address
+-Steps: Add food → Open cart → Enter/select valid address → Continue to checkout.
+-Test Data: Valid residential delivery address.
+-Expected Result: User proceeds successfully to the payment page.
+
+TC05 – Apply valid coupon
+-Steps: Add food → Go to checkout → Enter coupon code → Apply.
+-Test Data: Valid coupon code.
+-Expected Result: Coupon is accepted and the discount is applied to the order.
+
+TC06 – Make successful payment
+-Steps: Proceed to payment → Select UPI → Enter valid payment details → Confirm payment.
+-Test Data: Valid test UPI account.
+-Expected Result: Payment is successful and the order is placed.
+
+TC07 – Payment failure
+-Steps: Proceed to payment → Select payment method → Use invalid/failed payment details.
+-Test Data: Invalid payment details.
+-Expected Result: Payment fails with an appropriate error message and the order is not confirmed.
+
+TC08 – Verify order confirmation
+-Steps: Complete a successful payment → Open order details.
+-Test Data: Successfully placed food order.
+-Expected Result: Order ID, restaurant name, items, amount, delivery address, and order status are displayed correctly.
+
+
+
+
+4.Create a simple Requirement Traceability Matrix (RTM) mapping at least 3 requirements from your app to the test cases you wrote.<br><br><em><strong>Hint:</strong> Use a table format: Requirement ID, Description, Test Case IDs.</em>
+Answer :
+
+Requirement Traceability Matrix (RTM) – Zomato
+
+>>REQ-01: Add Food to Cart
+The user should be able to add food items to the cart.
+Mapped Test Cases: TC01, TC02, TC03
+
+>>REQ-02: Place Order
+The user should be able to place an order using a valid delivery address.
+Mapped Test Cases: TC04, TC08
+
+>>REQ-03: Apply Coupon
+The user should be able to apply a valid coupon during checkout.
+Mapped Test Case: TC05
+
+>>REQ-04: Successful Payment
+The user should be able to make a successful payment.
+Mapped Test Case: TC06
+
+>>REQ-05: Failed Payment Handling
+The system should display an appropriate message when payment fails.
+Mapped Test Case: TC07
+
+
+
+
+
+5.Imagine you executed your test cases and found 2 bugs. Write defect reports for both, including steps to reproduce, expected vs actual results, and severity. Then, prepare a brief final test report summarizing your testing process and results.
+Answer :
+
+Defect Report 1 – Payment Failure
+
+Defect ID: BUG-01
+Title: Payment fails even with valid payment details
+Severity: High
+
+Steps to Reproduce:
+1>Login to the Zomato app.
+2>Select a restaurant and add food to the cart.
+3>Proceed to checkout.
+4>Select UPI payment.
+5>Enter valid payment details and confirm payment.
+
+Expected Result:
+Payment should be completed successfully and the order should be confirmed.
+
+Actual Result:
+Payment fails and the order is not confirmed even though valid payment details are used.
+
+Defect Report 2 – Incorrect Cart Total
+
+Defect ID: BUG-02
+Title: Cart total is incorrect after removing an item
+Severity: Medium
+
+Steps to Reproduce:
+1>Select a restaurant.
+2>Add Pizza (₹250) and Burger (₹150).
+3>Open the cart.
+4>Remove the Burger.
+
+Expected Result:
+The cart total should update to ₹250.
+
+Actual Result:
+The cart continues to display ₹400 after removing the Burger.
+
+>>Final Test Report
+
+Application: Zomato-like Food Delivery App
+Features Tested: Food ordering, cart, coupon, and payment.
+
+Manual testing was performed using positive and negative test cases. 8 test cases were executed and 2 defects were identified. One high-severity defect was found in payment and one medium-severity defect was found in cart calculation.
+
+Test Result: Testing is not fully passed because the payment defect should be fixed and retested before release.
