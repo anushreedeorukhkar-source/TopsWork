@@ -1,0 +1,79 @@
+1.Sign up for a free Jira account (cloud version), create a new project using the Scrum template, and take a screenshot of your empty Scrum board.
+Answer :
+
+
+2.In your Jira Scrum board, create an epic named 'Food Delivery App Features' and add three user stories under it: 'As a user, I want to search for restaurants', 'As a user, I want to track my order in real-time', and 'As a user, I want to pay using UPI'.
+Answer :
+User Stories under the Epic
+1)As a user, I want to search for restaurants
+Add this as a Story.
+Link it to the Food Delivery App Features epic.
+2)As a user, I want to track my order in real-time
+Add this as a Story.
+Link it to the same epic.
+3)As a user, I want to pay using UPI
+Add this as a Story.
+Link it to the same epic.
+
+Expected Jira Structure
+>>Food Delivery App Features (Epic)
+-Story: As a user, I want to search for restaurants
+-Story: As a user, I want to track my order in real-time
+-Story: As a user, I want to pay using UPI
+
+
+
+3.For the user story 'As a user, I want to search for restaurants', add two sub-tasks: 'Design search UI' and 'Integrate restaurant API'.
+Answer :
+User Story
+As a user, I want to search for restaurants
+
+Sub-tasks:
+-Design search UI
+-Create the search bar and restaurant search screen.
+-Integrate restaurant API
+-Connect the search feature with the restaurant API to fetch results.
+-Expected Jira Structure
+
+Epic: Food Delivery App Features
+→ Story: As a user, I want to search for restaurants
+→ Sub-task: Design search UI
+→ Sub-task: Integrate restaurant API
+
+
+4.Change the status of one of your sub-tasks from 'To Do' to 'In Progress' and then to 'Done' using the Jira board workflow.<br><br><em><strong>Hint:</strong> Drag and drop the task across columns to update its status.</em>
+Answer :
+
+To complete this in Jira:
+1)Open your Food Delivery App Scrum board.
+2)Find the sub-task “Design search UI” under “As a user, I want to search for restaurants.”
+3)Drag Design search UI from the To Do column to In Progress.
+4)After completing the work, drag it from In Progress to Done.
+5)Take a screenshot showing the task in the Done column.
+
+Final workflow:
+To Do → In Progress → Done
+
+
+
+5.Explore the different issue types available in Jira (Epic, Story, Task, Bug). For each type, create a sample issue in your project and write one line explaining when you would use that issue type in a real Zomato or Swiggy-like app.
+Answer :
+
+Create these four sample issues in your Jira project:
+1.) Epic – “Restaurant Search Feature”
+Use an Epic for a large feature that contains multiple related stories and tasks, such as restaurant search.
+
+2.) Story – “Search for restaurants by name”
+Use a Story for a user-focused feature that provides value to customers.
+
+3.) Task – “Integrate Restaurant API”
+Use a Task for a specific technical activity required to complete a feature.
+
+4.) Bug – “Search results not loading”
+Use a Bug when an existing feature is not working as expected and needs to be fixed.
+
+Example Jira Structure
+>>Food Delivery App
+-Epic: Restaurant Search Feature
+-Story: Search for restaurants by name
+-Task: Integrate Restaurant API
