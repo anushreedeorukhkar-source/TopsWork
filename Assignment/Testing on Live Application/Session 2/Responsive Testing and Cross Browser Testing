@@ -1,0 +1,62 @@
+1.Open Zomato.com in Chrome, press F12 to open DevTools, and use the device toolbar to simulate the site on iPhone 12, iPad, and a standard desktop. List 3 layout or UI changes you observe between these views.
+Answer :
+
+>>When Zomato.com is opened in Chrome and tested using DevTools Device Toolbar on iPhone 12, iPad, and Desktop, the following UI changes are  observed:
+
+1)Navigation: On iPhone 12, the navigation is more compact and simplified. On iPad and Desktop, more menu options are visible.
+2)Content Layout: On iPhone 12, restaurant cards and content are mostly arranged in a single-column layout. On iPad and Desktop, multiple cards can appear side-by-side.
+3)Images and Spacing: On mobile, images, buttons, and spacing are smaller to fit the screen. On iPad and Desktop, they become larger with more spacing.
+
+
+2.Pick any Flipkart product page and resize your browser window from desktop width down to mobile width. Note at which pixel widths (breakpoints) major layout shifts happen (e.g., menu collapses, grid changes to list). List the breakpoints and describe what changes at each.
+Answer :
+-Above 1024 px: Desktop layout is displayed. The header, search bar, product details, images, and navigation are arranged horizontally.
+-Around 768–1024 px: The layout becomes more compact. Navigation and product information reduce in size, and some elements move to -different rows.
+-Around 600–767 px: The product layout starts changing to a tablet/mobile-friendly design. Product images and details may be stacked vertically, and fewer navigation options are visible.
+-Below 600 px: Mobile layout is displayed. The header becomes compact, product images and information are mainly arranged vertically, and buttons such as Buy Now and Add to Cart become easier to access on a small screen.
+
+
+
+
+3.Open Myntra.com in both Chrome and Firefox browsers on your laptop. Take screenshots of the homepage in both browsers at desktop size and compare them. Identify and describe 2 differences in how elements (fonts, buttons, images, etc.) are rendered.
+Answer :
+1>Fonts and Text: The font rendering can look slightly different between Chrome and Firefox. Text may appear a little sharper or have slightly different spacing and thickness in one browser.
+2>Images and Buttons: Product/banner images and buttons may have small differences in size, alignment, or spacing because Chrome and Firefox use different browser rendering engines.
+
+4.Use BrowserStack (or CrossBrowserTesting) to test BookMyShow.com on at least two different browsers (Chrome and Edge) and two devices (one mobile, one desktop). Report any rendering or layout issues you find that appear in one browser/device but not the others.<br><br><em><strong>Hint:</strong> Focus on navigation menus, banners, and buttons for visible differences.</em>
+Answer :
+
+>>The following visible differences were observed:
+
+1)Navigation Menu: On desktop Chrome and Edge, the navigation menu is displayed horizontally. On mobile, the menu becomes compact and some options are hidden under a menu icon. The mobile layout may also have slightly different spacing.
+2)Banners: The promotional banners fit properly on desktop, while on mobile they are resized or cropped to fit the smaller screen. Some banner text may appear closer to the edges on mobile.
+3)Buttons: Buttons such as Book Tickets and other action buttons are larger and more spread out on desktop. On mobile, they become smaller or stack vertically. Minor differences in button alignment and spacing can also appear between Chrome and Edge.
+
+
+
+
+5.Identify 5 responsive UI issues on any one of your favorite apps' web versions (e.g., Spotify, Instagram, Swiggy) using Chrome DevTools device simulation. For each issue, describe the problem, the device size where it appears, and suggest a possible fix.
+Answer :
+
+>>I used Spotify Web as the example and tested it using Chrome DevTools Device Simulation.
+
+1>Navigation menu overlap
+Problem: The sidebar/menu can take up too much space on smaller screens.
+Device size: Mobile – 375 × 667 px
+Fix: Collapse the sidebar into a hamburger/menu icon on small screens.
+2>Text gets truncated
+Problem: Long song or playlist names may be cut off on narrow screens.
+Device size: Mobile – 360 × 800 px
+Fix: Use responsive text sizing and allow text to wrap or show ellipsis properly.
+3>Album images become too small
+Problem: Multiple album cards in a row make the images difficult to view on mobile.
+Device size: Mobile – 375 × 667 px
+Fix: Reduce the number of cards per row and increase the card width.
+4>Player controls become crowded
+Problem: Play, pause, volume, and other controls may appear too close together on small screens.
+Device size: Mobile – 390 × 844 px
+Fix: Hide less-important controls and provide a simplified mobile player.
+5>Horizontal scrolling/content overflow
+Problem: Some sections may extend beyond the screen width, causing unwanted horizontal scrolling.
+Device size: Tablet – 768 × 1024 px
+Fix: Use flexible widths such as percentages or CSS Grid/Flexbox and set proper responsive breakpoints.
