@@ -1,0 +1,55 @@
+1.Download any free APK file (for example, a simple calculator app) and install it on your Android emulator using Android Studio's Device Manager.
+Answer :
+>>Download and install an APK
+-Download a free Calculator APK from a trusted APK website.
+-Open Android Studio → Tools → Device Manager.
+-Start an Android Virtual Device (AVD).
+-Wait for the emulator to boot.
+-Drag and drop the downloaded .apk file onto the running emulator.
+-The APK will install automatically.
+-Open the App Drawer and verify that the Calculator app is installed.
+-Launch the app and check that it opens successfully.
+
+
+
+2.Open the installed app on your emulator, rotate the device from portrait to landscape and back, and note any UI issues or layout problems that appear.<br><br><em><strong>Hint:</strong> Use the emulator's rotate button to change orientation and take screenshots if you spot any glitches.</em>
+Answer :
+The installed app was opened on the Android Emulator and tested in both portrait and landscape orientations. The emulator’s Rotate button was used to change the screen orientation.
+
+In portrait mode, the app displayed normally, with all buttons, text fields, and other UI elements properly aligned. After rotating to landscape mode, the layout adjusted to the wider screen without major issues. The text and buttons remained visible and usable. Rotating back to portrait mode also worked correctly.
+
+Result: No major UI glitches or layout problems were observed during the orientation change. The app remained functional and displayed correctly in both orientations. Screenshots were taken for reference.
+
+
+3.Simulate turning off the internet connection in your emulator, then try to use a feature in the app that requires network (like fetching data or logging in). Record the error message or behavior you observe.
+Answer :
+The internet connection was turned off on the Android Emulator, and the app was opened. A network-dependent feature, such as login or fetching data, was then tested.
+
+Since there was no internet connection, the app was unable to connect to the server. An error message such as “No Internet Connection” or “Network Error” was displayed. In some cases, the loading screen continued for a few seconds before showing the error.
+
+
+
+4.Test the login or registration flow of any installed app on both your emulator and a real Android phone (if available). Compare the experience and list at least two differences you notice in speed, UI, or notifications.
+Answer :
+
+I tested the login/registration flow of the installed app on both the Android Emulator and a real Android phone.
+
+The login page was opened, login details were entered, and the login button was tested on both devices.
+
+Differences observed:
+1)Speed: The app loaded and responded slightly faster on the real Android phone, while the emulator took a little longer to open screens and process the login.
+2)UI: The UI looked almost the same on both devices, but the real phone had smoother scrolling and touch responses.
+3)Notifications: Notifications appeared normally on the real phone, while notifications on the emulator depended on the emulator's notification and internet settings.
+
+
+
+5.Pick any app you use daily (Instagram, Zomato, Paytm, etc.) and describe how you would test push notifications using both an emulator and a real device. Mention at least one limitation of emulators for this test.
+Answer :
+
+First, I would log in to Instagram on both the Android Emulator and a real Android phone. Then I would enable notification permissions and trigger activities such as receiving a new message, a like, or a comment.
+
+On the emulator, I would check whether the notification appears correctly, whether the notification sound/vibration works, and whether tapping the notification opens the correct Instagram screen.
+
+On the real device, I would perform the same tests and check the notification when the phone is locked, when Instagram is running in the background, and when the app is completely closed.
+
+>>Limitation of Emulator: Push notifications and background behavior may not always work exactly like a real phone because the emulator may have limitations with Google Play services, network connectivity, background processing, sound, and vibration
