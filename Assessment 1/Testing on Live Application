@@ -1,0 +1,414 @@
+(SECTION A - Concept Application)
+
+
+1.] SCENARIO 1-
+
+Answer :
+In Agile, testing should begin from the beginning of the sprint, not after development is completely finished. As soon as requirements and user stories are discussed, the QA team should start reviewing them, identifying possible test scenarios, and preparing test cases. During the two-week sprint, developers and testers work together continuously. For example, if the sprint includes a “Place Food Order” feature, QA can start preparing test cases while the developers are building the feature and then test it as soon as a working build is available.
+
+>> Entry Criteria – 2 examples
+
+1)Requirements/User Story is clear: The user story should have clear requirements and acceptance criteria so that the tester knows what needs to be tested.
+
+2)Testable build is available: The developed feature should be integrated and deployed to the testing environment, with the basic functionality working enough for testing to begin.
+
+Exit Criteria – 2 examples
+
+1)Planned testing is completed: All important test cases for the sprint have been executed, and critical/high-severity defects have been fixed or properly accepted by the team.
+
+2)Acceptance criteria are satisfied: The user story meets its acceptance criteria, and there are no known critical issues that would prevent the feature from being released.
+
+>> Agile Testing vs Waterfall Testing
+
+The main difference is when and how testing is performed. In Agile, testing is a continuous activity that happens throughout every sprint. Developers and testers work closely together, and defects are found and fixed quickly within the same sprint whenever possible. Requirements can also change based on feedback.
+
+In Waterfall, testing generally starts after the development phase is completed. The requirements and development phases are completed one after another, so testers usually get the complete application later in the process. If a major defect or requirement problem is found at that stage, fixing it can be more expensive and time-consuming.
+
+2.]SCENARIO 2-
+
+Answer :
+As a QA Lead, I would not allow the payment gateway testing to focus only on functional testing. Since the food delivery app is expected to handle 5,000 concurrent transactions during lunch hours, non-functional testing is equally important.
+
+1. Performance Testing
+Performance testing is critical because the payment gateway must handle around 5,000 transactions at the same time during peak lunch hours. We need to check response time, transaction processing speed, and whether the system slows down or fails under heavy traffic. Skipping this could result in failed payments and frustrated customers during busy periods.
+
+2. Security Testing
+Payment involves sensitive information such as user details, payment information, and transaction data. Security testing is needed to identify vulnerabilities such as unauthorized access, data leakage, or insecure payment processing. Skipping security testing could lead to financial loss and loss of customer trust.
+
+3. Reliability/Recovery Testing
+The payment gateway should continue working correctly even if there is a temporary network failure, server problem, or payment-service timeout. Recovery testing ensures that failed or interrupted transactions are handled properly and that users are not charged twice. This is especially important for a payment system.
+
+>>7th Key Principle – Absence-of-Errors Fallacy
+
+The Absence-of-Errors Fallacy states that simply finding and fixing defects does not guarantee that the software is useful or meets user needs.
+
+For this payment gateway, it is also not practical to test every possible transaction combination, such as every bank, card/UPI option, amount, network condition, device, user account, and transaction timing. There are too many combinations.
+
+Therefore, as a QA team, we should use risk-based testing, equivalence partitioning, boundary value analysis, and representative test scenarios to achieve good coverage without trying to test every possible combination.
+
+3.]SCENARIO 3-
+
+Answer :
+As a QA tester, I would use Equivalence Partitioning (EP) and Boundary Value Analysis (BVA) for the Apply Promo Code field. Since testing time is limited, these techniques help me find more defects without testing every possible promo code.
+
+1. Equivalence Partitioning
+
+The promo code must be 6–10 characters long and contain only letters and numbers.
+
+I would divide the inputs into these groups:
+
+Valid partitions:
+6–10 alphanumeric characters → Valid
+Example: ABC123, FOOD1234
+
+Invalid partitions:
+Less than 6 characters → Invalid
+Example: ABC12 (5 characters)
+More than 10 characters → Invalid
+Example: FOOD1234567 (11 characters)
+Contains special characters → Invalid
+Example: FOOD@123
+Contains spaces → Invalid
+Example: FOOD 123
+Empty/null value → Invalid
+Example: No promo code entered
+
+Instead of testing hundreds of possible codes, I can select one representative value from each partition.
+
+2. Boundary Value Analysis
+
+For the length restriction of 6–10 characters, the important boundary values are:
+5 characters → Invalid
+6 characters → Valid
+7 characters → Valid
+9 characters → Valid
+10 characters → Valid
+11 characters → Invalid
+
+For example:
+ABCDE → 5 characters → Invalid
+ABC123 → 6 characters → Valid
+ABC1234 → 7 characters → Valid
+ABC123456 → 9 characters → Valid
+ABC1234567 → 10 characters → Valid
+ABC12345678 → 11 characters → Invalid
+
+3. Which Technique Gives Better Coverage Here?
+-For this particular scenario, Boundary Value Analysis gives better defect coverage because the main restriction is based on a clear numerical boundary: 6 to 10 characters.
+
+-Developers commonly make mistakes at boundaries, such as accidentally allowing 5 characters or rejecting exactly 10 characters. BVA specifically targets these situations.
+
+-However, Equivalence Partitioning should also be used to catch invalid characters such as @, spaces, or symbols.
+
+Conclusion: I would use BVA as the primary technique for this field because the length boundaries are most likely to cause defects, and use EP alongside it to cover different types of invalid input. This gives strong defect coverage with a small number of test cases.
+
+4.]SCENARIO 4-
+
+Answer :
+As a QA Lead, I would treat these two defects very differently because one directly affects the user's ability to place an order, while the other is mainly a visual issue.
+
+Defect A: App crashes when tapping "Place Order"
+1>Severity: Blocker
+2>Priority: High
+3>Reason: The app crashes at the most important step of the food-ordering process, so affected users cannot complete their orders. Since it affects around 30% of users, it is a major release risk and must be fixed before release.
+
+Defect B: Restaurant logo is slightly misaligned on iPhone SE
+1>Severity: Minor
+2>Priority: Low
+3>Reason: The issue affects only the appearance of the restaurant listing and does not prevent users from searching, selecting food, or placing an order. It affects only one device model, so it can be scheduled for a later fix if necessary.
+
+>>Severity vs Priority
+
+-Severity tells us how badly the defect affects the application.
+
+-Priority tells us how urgently the defect should be fixed.
+
+For example, Defect A has Blocker severity and High priority because the crash prevents users from completing an order and affects a large portion of the user base.
+
+Defect B has Minor severity and Low priority because it is only a small visual problem on one device and does not affect the main functionality.
+
+>>Which Defect Should Be Fixed First?
+-Defect A must be fixed first. Since the release is only one day away, releasing an app that crashes when users try to place an order could result in failed orders, lost revenue, and a poor customer experience. The logo alignment issue is inconvenient but does not stop users from using the core functionality.
+
+Final decision: Fix Defect A immediately, retest it on the affected Android devices, and then focus on the minor UI defect if time permits.
+
+
+(SECTION B - Practical Testing Tasks)
+
+1.]TASK 1-
+
+Answer : 
+1. Test Objectives
+
+>The main objective is to make sure that users can securely and successfully log in to the food delivery application.
+
+1)Requirement Analysis Stage: Verify that 100% of Login requirements such as valid login, invalid credentials, password rules, and account lockout are clearly understood and covered by test scenarios.
+2)Test Case Design Stage: Prepare test cases covering at least 95% of identified Login requirements, including positive, negative, boundary, and validation scenarios.
+3)Test Execution Stage: Execute 100% of planned Login test cases and achieve at least 95% pass rate before considering the module ready for release testing.
+4)Defect Reporting/Retesting Stage: Ensure that 100% of Critical and Blocker Login defects are fixed and successfully retested before the test cycle is closed.
+
+2. Scope of Testing
+
+>>In-Scope
+The following items will be tested during this cycle:
+1)Login with valid and invalid username/email and password.
+2)Field validations, including empty fields, incorrect formats, and password requirements.
+3)Forgot Password functionality and password reset flow.
+4)Login error messages and validation messages.
+5)Login button, password visibility option, and basic UI behavior.
+6)Session handling after successful login and logout.
+
+>>Out-of-Scope
+The following items will not be tested in this cycle:
+1)Food ordering and checkout functionality after login.
+2)Payment gateway and payment transactions.
+3)Restaurant search, menu, cart, and delivery tracking features.
+4)Detailed performance testing of the entire application.
+5)Third-party authentication systems if they are outside the Login module's control.
+
+3. Entry Criteria
+
+Testing of the Login module can begin when:
+-The Login requirements and acceptance criteria are approved and available to the QA team.
+-A stable build containing the Login feature is deployed in the test environment.
+-Required test accounts and test data are available.
+-Test cases have been reviewed and approved.
+
+4. Exit Criteria
+
+-Testing can be completed when:
+-100% of planned Login test cases have been executed.
+-All Blocker and Critical defects are fixed and successfully retested.
+-No unresolved defect exists that prevents users from logging in or accessing their accounts.
+-The final test results and defect summary have been documented and shared with stakeholders.
+
+5. Risks and Mitigation Strategies
+Risk 1: Test environment or authentication server is unavailable
+>Impact: Test execution may be delayed.
+>Mitigation: Maintain a backup test environment and verify server availability before starting the test cycle.
+
+Risk 2: Test accounts or login data are unavailable
+>Impact: QA may not be able to test different login scenarios properly.
+>Mitigation: Prepare valid, invalid, locked, and newly registered test accounts before test execution begins.
+
+Risk 3: Critical Login defects are discovered just before release
+>Impact: The release may be delayed or users may experience login failures.>
+>Mitigation: Perform early smoke and functional testing as soon as the Login build is available and prioritize Critical/Blocker defects for immediate fixing.
+
+6. Overall Test Approach
+
+The Login module will be tested using functional, negative, validation, usability, compatibility, and basic security testing. Testing will start early in the STLC and continue through test execution, defect reporting, retesting, and final closure.
+
+Expected outcome: The Login feature should allow authorized users to log in successfully, reject invalid credentials correctly, provide meaningful error messages, and handle login-related failures without affecting the user experience
+
+2.] TASK 2 -
+
+Answer :
+For the food delivery application, the following Equivalence Partitioning (EP) and Boundary Value Analysis (BVA) test cases can be used for the Pincode and Phone Number fields.
+
+1. Equivalence Partitions
+
+>>Pincode – 6-digit numeric only
+Valid partition: Exactly 6 numeric digits.
+Invalid partition 1: Less than 6 digits.
+Invalid partition 2: More than 6 digits.
+Invalid partition 3: Contains alphabets.
+Invalid partition 4: Contains special characters.
+Invalid partition 5: Empty/null value.
+
+>>Phone Number – 10-digit numeric only
+Valid partition: Exactly 10 numeric digits.
+Invalid partition 1: Less than 10 digits.
+Invalid partition 2: More than 10 digits.
+Invalid partition 3: Contains alphabets.
+Invalid partition 4: Contains special characters.
+Invalid partition 5: Empty/null value.
+
+2. Boundary Values
+
+>>Pincode:
+Minimum valid length = 6 digits
+Maximum valid length = 6 digits
+
+>>Important boundary values:
+5 digits → Invalid
+6 digits → Valid
+7 digits → Invalid
+
+>>Phone Number:
+Minimum valid length = 10 digits
+Maximum valid length = 10 digits
+
+>>Important boundary values:
+9 digits → Invalid
+10 digits → Valid
+11 digits → Invalid
+
+3. Structured Test Cases
+
+TC01 – Valid Pincode
+Description: Verify that a 6-digit numeric pincode is accepted.
+Input Data: 380001
+Expected Result: Pincode should be accepted.
+Pass/Fail: Pass
+
+TC02 – Pincode Below Boundary
+Description: Verify that a 5-digit pincode is rejected.
+Input Data: 38000
+Expected Result: Validation message should be displayed and pincode should be rejected.
+Pass/Fail: Pass
+
+TC03 – Pincode Above Boundary
+Description: Verify that a 7-digit pincode is rejected.
+Input Data: 3800012
+Expected Result: Validation message should be displayed and pincode should be rejected.
+Pass/Fail: Pass
+
+TC04 – Pincode With Alphabet
+Description: Verify that alphabets are not accepted in the pincode field.
+Input Data: 3800AB
+Expected Result: Pincode should be rejected with an appropriate validation message.
+Pass/Fail: Pass
+
+TC05 – Pincode With Special Character
+Description: Verify that special characters are not accepted.
+Input Data: 38000@
+Expected Result: Pincode should be rejected.
+Pass/Fail: Pass
+
+TC06 – Empty Pincode
+Description: Verify that the pincode field cannot be left empty.
+Input Data: Empty
+Expected Result: Required-field validation message should be displayed.
+Pass/Fail: Pass
+
+TC07 – Valid Phone Number
+Description: Verify that a 10-digit numeric phone number is accepted.
+Input Data: 9876543210
+Expected Result: Phone number should be accepted.
+Pass/Fail: Pass
+
+TC08 – Phone Number Below Boundary
+Description: Verify that a 9-digit phone number is rejected.
+Input Data: 987654321
+Expected Result: Validation message should be displayed and the number should be rejected.
+Pass/Fail: Pass
+
+TC09 – Phone Number Above Boundary
+Description: Verify that an 11-digit phone number is rejected.
+Input Data: 98765432101
+Expected Result: Validation message should be displayed and the number should be rejected.
+Pass/Fail: Pass
+
+TC10 – Phone Number With Alphabet
+Description: Verify that alphabets are not accepted in the phone number field.
+Input Data: 98765ABCDE
+Expected Result: Phone number should be rejected.
+Pass/Fail: Pass
+
+TC11 – Phone Number With Special Character
+Description: Verify that special characters are not accepted.
+Input Data: 98765@3210
+Expected Result: Phone number should be rejected.
+Pass/Fail: Pass
+
+TC12 – Empty Phone Number
+Description: Verify that the phone number field cannot be left empty.
+Input Data: Empty
+Expected Result: Required-field validation message should be displayed.
+Pass/Fail: Pass
+
+3.] TASK 3-
+
+Answer :
+Test Scenarios
+
+REQ-01 – Add Item to Cart
+TS-01: Verify that a user can add a single food item to the cart successfully.
+TS-02: Verify that increasing or decreasing the quantity of an item updates the cart correctly.
+
+REQ-02 – Apply Coupon
+TS-03: Verify that a valid coupon is applied and the correct discount is calculated.
+TS-04: Verify that an invalid or expired coupon is rejected with an appropriate message.
+
+REQ-03 – Select Payment Method
+TS-05: Verify that the user can select UPI as the payment method.
+TS-06: Verify that the user can select another available payment method, such as Cash on Delivery or card.
+
+REQ-04 – Place Order
+TS-07: Verify that an order is successfully placed after valid payment.
+TS-08: Verify that an order is not placed when the payment fails.
+
+REQ-05 – Order Confirmation
+TS-09: Verify that the order confirmation screen appears after successful order placement.
+TS-10: Verify that the confirmation screen displays the correct order ID, items, amount, and delivery details.
+
+REQ-06 – Order History
+TS-11: Verify that a newly placed order appears in the user's Order History.
+TS-12: Verify that selecting an order from Order History displays its correct details.
+
+>>Defect Severity
+1)S1 – Critical: DEF-03 is S1 because the payment method cannot proceed, preventing users from completing their orders.
+2)S2 – Major: DEF-01 is S2 because incorrect cart totals can result in users being charged or shown the wrong amount.
+3)S3 – Minor: DEF-02 is S3 because the coupon functionality works, but the displayed discount has a minor calculation/display issue.
+
+This RTM provides forward traceability from each requirement to its related test scenarios and helps ensure that important defects are linked back to the requirement they affect.
+
+4.] TASK 4-
+
+Answer :
+1. Web UI Test Checks
+-Form Validation: Verify that required fields such as delivery address, phone number, and payment details cannot be left empty and that appropriate validation messages are displayed.
+-Navigation Links: Verify that links such as Back to Cart, Edit Address, Apply Coupon, and Terms & Conditions open the correct pages or sections.
+-Data Submission: Enter valid checkout information and click Place Order. Verify that the data is submitted successfully and the user is redirected to the order confirmation page.
+-UI Element Rendering: Verify that the order summary, food items, prices, coupon field, payment options, buttons, and total amount are displayed correctly without overlapping or missing elements.
+-Error Message Handling: Enter invalid information or simulate a failed payment and verify that a clear and user-friendly error message is displayed without losing the entered checkout information.
+
+2. Cross-Browser Test Scenarios
+>Scenario 1 – Checkout Form and UI
+
+Open the Checkout page in Chrome, Firefox, and Edge and verify that all fields, buttons, order details, and payment options are displayed correctly.
+
+Expected Result: The page should have the same functionality and layout across all three browsers.
+
+Expected Difference: Minor differences in font rendering or spacing may occur because browsers use different rendering engines, but there should be no functional or major layout issues.
+
+>Scenario 2 – Coupon and Order Total
+Apply a valid coupon in Chrome, Firefox, and Edge and verify that the discount and final order total are calculated correctly.
+
+Expected Result: The same coupon should be accepted and the same final amount should be displayed in all three browsers.
+
+Expected Difference: The appearance of the coupon field or button may have very minor differences, but the calculation should remain identical.
+
+>Scenario 3 – Place Order and Error Handling
+Attempt to place an order with invalid or incomplete information in all three browsers.
+
+Expected Result: The same validation/error message should appear and the order should not be submitted.
+
+Expected Difference: Browser-specific alert styling or font rendering may look slightly different, but the application's behavior should remain the same.
+
+
+3. SQL Queries for Backend Verification
+
+>>Assume the database contains an orders table with columns such as order_id, order_total, coupon_code, and payment_method.
+
+1) Query 1 – Verify Order Total
+SELECT order_id, order_total
+FROM orders
+WHERE order_id = 1001;
+
+The returned order_total should exactly match the total displayed on the Checkout page.
+
+2) Query 2 – Verify Applied Coupon
+SELECT order_id, coupon_code
+FROM orders
+WHERE order_id = 1001;
+
+The returned coupon_code should match the coupon displayed/applied on the Checkout page.
+
+3) Query 3 – Verify Payment Method
+SELECT order_id, payment_method
+FROM orders
+WHERE order_id = 1001;
+
+The returned payment_method should exactly match the payment method selected on the Checkout page.
