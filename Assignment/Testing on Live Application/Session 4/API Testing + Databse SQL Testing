@@ -1,0 +1,57 @@
+1.Use the online API testing tool ReqRes (https://reqres.in/) to make a GET request to /api/users/2 and note down the response status code and the returned user's first name.
+Answer :
+>>GET Request – /api/users/2
+I sent a GET request to /api/users/2 using ReqRes. The response status code was 200 OK. The returned user's first name was Janet.
+
+
+2.Send a POST request using ReqRes to /api/users with JSON data {"name": "Virat", "job": "Cricketer"} and write down the response code and the id value returned in the response.
+Answer :
+
+POST Request – /api/users
+
+I sent a POST request with the following JSON data:
+
+{
+  "name": "Virat",
+  "job": "Cricketer"
+}
+
+
+3.Given the following JSON response from an API: {"id": 101, "name": "Pizza Hut", "location": "Ahmedabad"}, write the SQL INSERT statement to add this restaurant to a table named restaurants with columns id, name, and location.
+Answer :
+
+>>SQL INSERT Statement
+For the given restaurant JSON:
+
+{"id": 101, "name": "Pizza Hut", "location": "Ahmedabad"}
+
+>>The SQL statement is:
+INSERT INTO restaurants (id, name, location)
+VALUES (101, 'Pizza Hut', 'Ahmedabad');
+
+
+
+4.Suppose you have a users table in your database and the UI shows a new user 'Riya' was registered. Write an SQL SELECT query to confirm if 'Riya' exists in the users table, and explain what result you would expect if the UI and DB are in sync.
+Answer :
+
+Check Whether Riya Exists
+
+To check whether the user Riya exists in the users table, use:
+
+SELECT *
+FROM users
+WHERE name = 'Riya';
+
+
+
+5.After deleting a product from your shopping cart in the Flipkart UI, write an SQL query to verify that the product is no longer present in the cart_items table for your user.<br><br><em><strong>Hint:</strong> Use SELECT to check for the product_id and your user_id in cart_items.</em>
+Answer :
+
+-Verify Product Deletion from Cart
+
+-After deleting a product from the Flipkart UI, use the following query:
+
+SELECT *
+FROM cart_items
+WHERE product_id = 101
+AND user_id = 1;
