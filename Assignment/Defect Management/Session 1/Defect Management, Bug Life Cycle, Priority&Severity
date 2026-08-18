@@ -1,0 +1,50 @@
+1.Pick any mobile app you use daily (like Zomato, Instagram, or Paytm), open its login or signup form, and identify 5 possible defects in the UI or workflow. Write each defect as a clear defect statement.
+Answer :
+>> Five Possible Defects in Instagram Login/Signup
+
+I selected Instagram and considered its login/signup form.
+
+1>Login button remains disabled even after entering valid username and password.
+2>Incorrect password does not display a proper error message to the user.
+3>Password field displays the password in plain text instead of masking it.
+4>Forgot Password link does not open the password recovery page.
+5>Signup form accepts an invalid email address without showing a validation message.
+
+
+
+2.For each defect you found in the previous task, assign a Severity level (Blocker, Critical, Major, Minor, Trivial) and a Priority level (High, Medium, Low). Briefly justify your choice for one defect where severity and priority are different.<br><br><em><strong>Hint:</strong> Think about how badly the defect impacts users (severity) versus how quickly it should be fixed (priority).</em>
+Answer :
+
+>>Severity and Priority
+
+1)Login button remains disabled with valid credentials
+Severity: Critical
+Priority: High
+2)Incorrect password does not show an error message
+Severity: Major
+Priority: High
+3)Password is displayed in plain text
+Severity: Major
+Priority: High
+4)Forgot Password link does not work
+Severity: Major
+Priority: Medium
+5)Invalid email is accepted during signup
+Severity: Minor
+Priority: Medium
+
+>>Example where severity and priority are different:
+The Forgot Password link not working can have Major severity because users who forget their passwords cannot recover their accounts. However, it may have Medium priority if normal login is working and only a smaller percentage of users are affected. Severity describes the impact, while priority describes how urgently it should be fixed.
+
+
+3.Draw a Bug Life Cycle diagram showing all the main states (New, Assigned, Open, Fixed, Retest, Verified, Closed, Rejected, Deferred, Duplicate, Not a Bug) and the transitions between them. You can use pen-paper and upload a photo, or use any diagram tool you like.
+Answer :
+
+
+
+4.Write a short scenario where a defect in a UPI payment feature (like in PhonePe or Paytm) is found very late—after the app is live. Explain in 4-5 lines how the cost and impact of fixing this defect would be different if it was caught during development instead.
+Answer :
+
+Suppose a UPI payment defect in a Paytm-like app is discovered after the app has already been released. 
+Some users may experience failed payments, delayed transactions, or incorrect payment status, which can cause financial and customer-support issues. If the defect had been found during development, developers could have fixed and tested it before release at a much lower cost. After release, the company may need an emergency fix, additional testing, customer support, refunds, and possibly a new app update. 
+Therefore, fixing defects early is cheaper and reduces the impact on users.
