@@ -1,0 +1,61 @@
+1.Open the Flipkart website in your browser and test the main navigation bar — click each menu item (like Electronics, Fashion, Home, etc.) and verify that the URL changes correctly and the expected content loads.
+Answer :
+
+Steps :
+1.) Open Flipkart
+2.) Click on the Navigation bar
+3.) Each menu on the navigation bar like 
+Fashion is being clicked, expected content is shown and URL also changes correctly.
+Similarly, Electronics is being clicked, expected content is showen and URL also changes correctly.
+Appliances is being clicked, expected content loads and URL also changes correctly.
+Beauty is being clicked, expected content loads and URL also changes correctly.
+
+>>Conclusion : All menus on the navigation bar in Flipkart are successfully working, all the expected contents are loading and URL of all the different menu changes correclty.
+
+
+
+2.Pick any sign-up or login form from a popular web app you use (like Zomato, Instagram, or Paytm) and test its field validation by entering invalid email addresses, leaving required fields blank, and submitting — note the error messages shown for each case.
+
+Answer :
+For Instagram Application
+1.) Invalid email address and putting wrong password gives me error message like "The login information you entered is incorrect." 
+2.) Leaving required fields blank, the log in button gets disabled.
+
+
+
+
+3.Install the Notepad++ desktop application on your Windows machine, then test if the installer correctly creates a Start Menu shortcut and check if you can save a text file to your Documents folder.
+Answer :
+Steps :
+1.)Download Notepad++ on the device.
+2.)The installer creates the start menu shortcut correctly.
+3.)A text file is being saved on document folder successfully.
+
+Conclusion :
+All the expected results are achieved, the basic file-saving and installation of Notepad++ is successfully tested without any error.
+
+
+4.Download and install the 'Spotify Lite' APK on an Android emulator (like BlueStacks or Android Studio emulator), then verify that the app launches, the login screen appears, and the UI elements (logo, fields, buttons) are properly displayed on your mobile screen.<br><br><em><strong>Hint:</strong> If you don't have a real device, use any free Android emulator and a safe APK download source.</em>
+Answer :
+Steps :
+1.)Download Spotify Lite APK.
+2.)Install APK file 
+3.)Launch Spotify Lite
+4.)After launching app, it opens without crashing.
+5.)Log in screen is displayed.
+6.)Logo is visible and properly positioned.
+7.)Username/email and password fields are visible.
+8.)Login button is visible and usable.
+9.)UI fits correctly on the screen.
+10.)UI remains usable without major overlap/cutoff.
+
+>>Conclusion : Spotify Lite is installed successfully on the Android emulator, it launches without crashing, and displays its login screen with the logo, input fields, and buttons are correctly aligned and visible.
+
+
+5.Test the window handling of the Windows Calculator app by opening multiple instances (if possible), switching between them, and checking if calculations in one window affect the others.
+Answer :
+1.)Open Calculator app 
+2.)Open multiple windows/instances
+3.)Perform different calculations on all the opened instances.
+4.)The Calculator app is successfully opened on multiple windows and calculations are also performed correctly.
+5.)The windows doesn't affect each other. 
