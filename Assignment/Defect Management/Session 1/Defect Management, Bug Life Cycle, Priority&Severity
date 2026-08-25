@@ -44,7 +44,6 @@ Answer :
 
 4.Write a short scenario where a defect in a UPI payment feature (like in PhonePe or Paytm) is found very late—after the app is live. Explain in 4-5 lines how the cost and impact of fixing this defect would be different if it was caught during development instead.
 Answer :
-
 Suppose a UPI payment defect in a Paytm-like app is discovered after the app has already been released. 
 Some users may experience failed payments, delayed transactions, or incorrect payment status, which can cause financial and customer-support issues. If the defect had been found during development, developers could have fixed and tested it before release at a much lower cost. After release, the company may need an emergency fix, additional testing, customer support, refunds, and possibly a new app update. 
 Therefore, fixing defects early is cheaper and reduces the impact on users.
