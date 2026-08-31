@@ -1,0 +1,84 @@
+1.Install MySQL Community Server or use an online SQL editor like db-fiddle.com, then create a new database named insta_clone_practice.
+Answer :
+
+Steps :-
+1)You can use MySQL in XAMPP or an online SQL editor like DB Fiddle.
+2)To create database named insta_clone_practice
+- Open MySQL and write this query 
+-CREATE DATABASE insta_clone_practice;
+
+
+
+
+2.Inside your insta_clone_practice database, create a table called users with columns: id (INT, primary key, auto-increment), username (VARCHAR), email (VARCHAR), and created_at (DATETIME).
+Answer :
+
+1)In the insta_clone_practice database, create table named users.
+2)Write this query to create columns :
+
+- CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    created_at DATETIME
+);
+
+3) The user table is created with columns id, username, email, created_at.
+
+
+
+
+3.Insert 3 sample users into the users table with different usernames and emails, using SQL INSERT statements.
+Answer :
+
+1)To insert sample users in the users table, write this query using INSERT statement.
+
+-INSERT INTO users (id, username, email) VALUES
+(1, 'Anushree', 'anu@gamil.com'),
+(2, 'Aanya', 'aanya@gamil.com'),
+(3, 'Yathaarth', 'yathaarth@example.com');
+
+
+
+
+
+4.Write a SQL SELECT query to fetch all users whose email ends with 'gmail.com' from the users table.<br><br><em><strong>Hint:</strong> Use the LIKE operator with a wildcard.</em>
+Answer :
+
+1) Write this query to fetch all the users whose email ends with 'gmail.com' from the users table.
+
+- SELECT *
+  FROM users
+  WHERE email LIKE '%gmail.com';
+
+2) This displays only emails with "gmail.com".
+
+
+
+
+5.Create a comparison table (in any text editor) listing 3 differences between RDBMS (like MySQL) and NoSQL databases (like MongoDB), using real-world examples from apps like Instagram or 
+WhatsApp.
+Answer :
+
+RDBMS (MySQL) vs NoSQL (MongoDB)
+
+1.)Data Structure
+MySQL stores data in tables with rows and columns.
+MongoDB stores data in flexible JSON-like documents.
+Example: Instagram can use structured tables for user accounts, while flexible documents can store changing post details.
+
+2.)Relationships
+MySQL is good for handling relationships between data using keys.
+MongoDB can store related information together in a document.
+Example: WhatsApp user and chat data may have many changing fields, making flexible storage useful.
+
+3.)Scalability
+MySQL is commonly scaled vertically by improving the server.
+MongoDB is designed to scale horizontally across multiple servers.
+Example: Apps like Instagram and WhatsApp handle millions of users and large amounts of data, so scalable databases are important.
+
+
+
+
+
+
