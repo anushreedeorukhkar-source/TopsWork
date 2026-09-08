@@ -1,35 +1,72 @@
 1.Write an SQL query to check if a given email already exists in the 'users' table before allowing signup, similar to how Zomato or Flipkart prevents duplicate accounts.
+Answer :
+
+SELECT *
+FROM users
+WHERE email = 'user@gmail.com';
+
+1)If a record is returned - Email already exists, don't allow signup
+2)If 0 rows are returned - Email is available for signup
 
 
 
 
 
 2.After a user signs up, write an SQL query to validate that their username, email, and phone number have been correctly inserted into the 'users' table.<br><br><em><strong>Hint:</strong> Use a SELECT statement with WHERE conditions matching the signup data.</em>
+Answer :
 
+SELECT *
+FROM users
+WHERE username = 'Anushree'
+  AND email = 'anushree@gmail.com'
+  AND phone = '9876543210';
 
-
-
+1)If the record is displayed - Signup data was inserted correctly
+2)If 0 rows are returned - Data is missing or incorrect
 
 
 
 
 
 3.During login testing, write an SQL query to fetch the hashed password and account status for a given username from the 'users' table to verify backend authentication logic.
+Answer :
 
+SELECT password_hash, status
+FROM users
+WHERE username = 'Anushree';
 
-
+- This fetches the user's hashed password and account status (Active/Inactive) to verify the backend login logic.
 
 
 
 
 
 4.Simulate a profile update (like changing your profile picture or bio on Instagram) by writing an SQL UPDATE query to modify the 'profile_pic_url' and 'bio' fields for a specific user in the 'users' table, then write a SELECT query to confirm the update.
+Answer :
+
+>>Step 1 : Update profile
+
+UPDATE users
+SET profile_pic_url = 'wdmdz.jpg',
+    bio = 'xyzxyz'
+WHERE user_id = 101;
 
 
+>>Step 2 : Confirm the updated profile
 
-
+SELECT profile_pic_url, bio
+FROM users
+WHERE user_id = 101;
 
 
 
 
 5.Suppose a new feature adds a 'last_login' timestamp column to the 'users' table. Write an SQL query to check which users have not logged in for more than 30 days, as part of post-release database validation.<br><br><em><strong>Hint:</strong> Use the DATE or TIMESTAMP functions in your WHERE clause.</em>
+Answer :
+
+
+SELECT *
+FROM users
+WHERE last_login < CURRENT_TIMESTAMP - INTERVAL 30 DAY;
+
+- This returns users whose last_login was more than 30 days ago.
