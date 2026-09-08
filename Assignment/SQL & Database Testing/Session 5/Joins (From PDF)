@@ -52,6 +52,8 @@ FROM Payments
 FULL JOIN Refunds
 ON Payments.transaction_id = Refunds.transaction_id;
 
+- ON Payments.transaction_id = Refunds.transaction_id = Matches payment and refund records using the transaction_id.
+- And shows transactions that are only payments, only refunds, or both payments and refunds.
 
 
 
@@ -65,3 +67,5 @@ FROM Movies m1
 JOIN Movies m2
 ON m1.genre = m2.genre
 AND m1.movie_id < m2.movie_id;
+
+-Finds pairs of different movies that belong to the same genre.
