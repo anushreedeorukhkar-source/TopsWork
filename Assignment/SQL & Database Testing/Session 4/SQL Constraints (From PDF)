@@ -63,9 +63,14 @@ Steps :
 Answer :
 
 Steps :
- 
-- 
+- ALTER TABLE Playlist
+  ADD CONSTRAINT chk_song_name
+  CHECK (CHAR_LENGTH(song_name) >= 3);
 
+- INSERT INTO Playlist (song_name)
+  VALUES ('AB');
 
+- ERROR 4025 (23000): CONSTRAINT `chk_song_name` failed for `Playlist`
+This error occurs because the record inserted has only 2 characters.
 
 
