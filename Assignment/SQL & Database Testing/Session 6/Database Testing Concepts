@@ -1,13 +1,111 @@
 1.Create a new user registration form for a food delivery app (like Zomato) that saves user details (username, email, phone) to a MySQL database. After submitting the form, verify directly in the database that the new user record is created with correct values.
+Answer :
+
+Steps :
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(15)
+);
+
+
+SELECT * FROM users
+WHERE username = 'Anushree';
+
+
+
 
 
 2.Given a table 'orders' in a Flipkart-style database with fields: order_id, user_id, item_name, quantity, and status, write SQL queries to validate that all orders with status 'delivered' have a non-zero quantity and item_name is not NULL.<br><br><em><strong>Hint:</strong> Use SELECT queries with WHERE conditions to check for invalid data.</em>
+Answer :
+
+>>Step 1 :
+
+SELECT *
+FROM orders
+WHERE status = 'delivered'
+AND quantity = 0;
+
+- This will display the delivered orders with zero quantity.
+
+>>Step 2 :
+
+SELECT *
+FROM orders
+WHERE status = 'delivered'
+AND item_name IS NULL;
+
+- This will display the delivered orders where item name is NULL.
+
+
+
 
 
 3.Compare the displayed user profile data in your app (name, email, mobile) with the actual data stored in the backend database for the same user. Report any mismatches you find between UI and database values.<br><br><em><strong>Hint:</strong> Change a value in the database manually, refresh the UI, and observe if the change is reflected or not.</em>
+Answer :
+
+>To compare the Name, Email, and Mobile displayed in the UI with the values stored in the database execute this query in my sql
+
+UPDATE users
+SET name = 'Jayashree'
+WHERE user_id = 101;
+
+
+SELECT name, email, mobile
+FROM users
+WHERE user_id = 101;
+
+- The updated name was displayed successfully on the table as well as on the UI. 
+- No mismatches were found.
+
+
 
 
 4.Perform field-level validation for a 'playlist' table (like Spotify) with fields: playlist_id, playlist_name, created_by, created_at. Check if any records have empty playlist_name or invalid created_at dates using SQL. Document your findings.
+Answer :
+
+Step 1 :
+To check empty playlists in the table 
+
+SELECT *
+FROM playlist
+WHERE playlist_name IS NULL
+   OR playlist_name = '';
+
+- This query finds playlists that do not have a proper name.
+
+
+Step 2 :
+To check invalid dates 
+
+SELECT *
+FROM playlist
+WHERE created_at IS NULL
+   OR created_at = '0000-00-00 00:00:00';
+
+
+
 
 
 5.Explain with a practical example how the ACID properties (Atomicity, Consistency, Isolation, Durability) would apply when a user books a movie ticket on BookMyShow and the payment is processed. Give one line for each property.
+Answer :
+
+>> ACID stands for 
+
+A – Atomicity: All steps happen, or none happen.
+C – Consistency: Data remains correct after the transaction.
+I – Isolation: Transactions don't interfere with each other.
+D – Durability: Saved data remains saved even after a system failure.
+
+-A practical example how the ACID properties (Atomicity, Consistency, Isolation, Durability) would apply when a user books a movie ticket on BookMyShow and the payment is processed.
+
+Atomicity: Either the ticket booking and payment both succeed, or both are cancelled.
+Consistency: After booking, the database remains correct—for example, the booked seat cannot be available to another user.
+Isolation: Two users booking the same seat at the same time are handled separately, preventing duplicate booking.
+Durability: Once payment and booking are confirmed, the booking remains saved even if the server crashes.
+
+
+
+
